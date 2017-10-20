@@ -51,13 +51,13 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Vagueness"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Outcomes"/>
@@ -144,10 +144,10 @@ Current: v3</Literal>
         <Class IRI="#EvaluationMetric"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#CredibilityCannotBeJudged"/>
+        <Class IRI="#Configurality"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Configurality"/>
+        <NamedIndividual IRI="#CredibilityCannotBeJudged"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#isGeneratedBy"/>
@@ -222,10 +222,10 @@ Current: v3</Literal>
         <ObjectProperty IRI="#assesses"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#AmbiguousEvidence"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#AmbiguousEvidence"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation"/>
@@ -240,10 +240,10 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Epistemic"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Epistemic"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CredibilityDoubtful"/>
@@ -261,10 +261,10 @@ Current: v3</Literal>
         <Class IRI="#FusionSystem"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#CredibilityImprobable"/>
+        <Class IRI="#STANAG2511Reliability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#STANAG2511Reliability"/>
+        <NamedIndividual IRI="#CredibilityImprobable"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#UnreliableEvidence"/>
@@ -554,6 +554,12 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
     </SubClassOf>
     <DisjointClasses>
+        <Class IRI="#DataHandlingCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
     </DisjointClasses>
@@ -564,7 +570,6 @@ Current: v3</Literal>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -663,20 +668,6 @@ Current: v3</Literal>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isAssessedBy"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#generates"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#generates"/>
-            <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion"/>
-        </ObjectSomeValuesFrom>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#isGeneratedBy"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#isGeneratedBy"/>
-            <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
-        </ObjectSomeValuesFrom>
     </ObjectPropertyRange>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasCode"/>
@@ -1057,5 +1048,5 @@ The man is about 2 metres tall – more vague</Literal>
 
 
 
-<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
