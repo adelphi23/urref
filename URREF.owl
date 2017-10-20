@@ -560,6 +560,21 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#EvaluationMetric"/>
+        <Class IRI="#EvaluationSubject"/>
+        <Class IRI="#FusionSystem"/>
+        <Class IRI="#Information"/>
+        <Class IRI="#TypeOfScale"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#UncertainEvidence"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Sentence"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyModel"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
     </DisjointClasses>
