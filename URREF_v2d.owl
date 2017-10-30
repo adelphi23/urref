@@ -233,6 +233,15 @@ Current: v2d</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Vagueness"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#Asseses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsAssedby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsassesdBy"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#assesses"/>
     </Declaration>
     <Declaration>
@@ -515,6 +524,14 @@ Current: v2d</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Probability"/>
         <NamedIndividual IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN"/>
     </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Asseses"/>
+        <ObjectProperty IRI="#assesses"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#IsassesdBy"/>
+        <ObjectProperty IRI="#isAssessedBy"/>
+    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#assesses"/>
         <ObjectProperty IRI="#isAssessedBy"/>
@@ -524,6 +541,14 @@ Current: v2d</Literal>
         <ObjectProperty IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#generates"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Asseses"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsassesdBy"/>
+        <Class IRI="#DataInput"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#assesses"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
     </ObjectPropertyDomain>
@@ -531,6 +556,14 @@ Current: v2d</Literal>
         <ObjectProperty IRI="#isAssessedBy"/>
         <Class IRI="#EvaluationSubject"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Asseses"/>
+        <Class IRI="#DataInput"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsassesdBy"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#assesses"/>
         <Class IRI="#EvaluationSubject"/>
