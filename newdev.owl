@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl">
-    <Prefix name="" IRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl"/>
+    <Prefix name="" IRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -63,9 +63,6 @@ Current: v3</Literal>
         <Class IRI="#Ordinal"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Dempster"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
     </Declaration>
     <Declaration>
@@ -79,6 +76,9 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DST"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasCode"/>
@@ -165,7 +165,7 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Ambiguity"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Bays"/>
+        <NamedIndividual IRI="#BayesRule"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity"/>
@@ -611,7 +611,7 @@ Current: v3</Literal>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#DataProcessingTechnique"/>
-        <NamedIndividual IRI="#Bays"/>
+        <NamedIndividual IRI="#BayesRule"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
@@ -643,7 +643,7 @@ Current: v3</Literal>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DataProcessingTechnique"/>
-        <NamedIndividual IRI="#Dempster"/>
+        <NamedIndividual IRI="#DST"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DataInput"/>
@@ -667,7 +667,7 @@ Current: v3</Literal>
     </DifferentIndividuals>
     <DataPropertyAssertion>
         <DataProperty IRI="#usesource"/>
-        <NamedIndividual IRI="#Bays"/>
+        <NamedIndividual IRI="#BayesRule"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -699,6 +699,11 @@ Current: v3</Literal>
         <DataProperty IRI="#hasCode"/>
         <NamedIndividual IRI="#CredibilityProbablyTrue"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#usesource"/>
+        <NamedIndividual IRI="#DST"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#OuputAssessedBy"/>
@@ -773,8 +778,8 @@ Current: v3</Literal>
     </FunctionalDataProperty>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Bays</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Is a evaluation technique in maritime usecase</Literal>
+        <IRI>#BayesRule</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Is a evaluation technique in maritime usecase</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
