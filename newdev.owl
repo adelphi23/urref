@@ -24,16 +24,10 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Timeliness"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#camera"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#usesource"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#FuzzySets"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Maritime_sensor_report"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Probability"/>
@@ -42,10 +36,10 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Vagueness"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Vagueness"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Outcomes"/>
@@ -63,10 +57,10 @@ Current: v3</Literal>
         <Class IRI="#Ordinal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+        <Class IRI="#Ratio"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Ratio"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#IncompleteEvidence"/>
@@ -76,6 +70,9 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CargoCapitain"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DST"/>
@@ -144,10 +141,10 @@ Current: v3</Literal>
         <ObjectProperty IRI="#assesses"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#AmbiguousEvidence"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#AmbiguousEvidence"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation"/>
@@ -162,13 +159,19 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Epistemic"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MaritimePredictedVessel"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Ambiguity"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BayesRule"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity"/>
+        <NamedIndividual IRI="#Camera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BayesRule"/>
     </Declaration>
     <Declaration>
         <Class IRI="#FusionSystem"/>
@@ -187,9 +190,6 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Veracity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#CargoCapital"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Relational"/>
@@ -276,13 +276,10 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Maritime-Predicted-vessel"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Sentence"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Sentence"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation"/>
@@ -294,22 +291,25 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Aleatory"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CredibilityDoubtful"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MaritimeSensorReport"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#CredibilityImprobable"/>
+        <Class IRI="#STANAG2511Reliability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#STANAG2511Reliability"/>
+        <NamedIndividual IRI="#CredibilityImprobable"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Subjective"/>
@@ -615,7 +615,11 @@ Current: v3</Literal>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
-        <NamedIndividual IRI="#CargoCapital"/>
+        <NamedIndividual IRI="#Camera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+        <NamedIndividual IRI="#CargoCapitain"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#STANAG2511Credibility"/>
@@ -646,12 +650,12 @@ Current: v3</Literal>
         <NamedIndividual IRI="#DST"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#DataInput"/>
-        <NamedIndividual IRI="#Maritime_sensor_report"/>
+        <Class IRI="#DataOutput"/>
+        <NamedIndividual IRI="#MaritimePredictedVessel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
-        <NamedIndividual IRI="#camera"/>
+        <Class IRI="#DataInput"/>
+        <NamedIndividual IRI="#MaritimeSensorReport"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Probability"/>
@@ -662,8 +666,8 @@ Current: v3</Literal>
         <NamedIndividual IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN"/>
     </ClassAssertion>
     <DifferentIndividuals>
-        <NamedIndividual IRI="#CargoCapital"/>
-        <NamedIndividual IRI="#camera"/>
+        <NamedIndividual IRI="#Camera"/>
+        <NamedIndividual IRI="#CargoCapitain"/>
     </DifferentIndividuals>
     <DataPropertyAssertion>
         <DataProperty IRI="#usesource"/>
