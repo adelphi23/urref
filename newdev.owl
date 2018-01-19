@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl">
-    <Prefix name="" IRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl#"/>
+    <Prefix name="" IRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -36,10 +36,10 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Vagueness"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Vagueness"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Outcomes"/>
@@ -57,10 +57,10 @@ Current: v3</Literal>
         <Class IRI="#Ordinal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Ratio"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+        <Class IRI="#Ratio"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#IncompleteEvidence"/>
@@ -141,10 +141,10 @@ Current: v3</Literal>
         <ObjectProperty IRI="#assesses"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#AmbiguousEvidence"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#AmbiguousEvidence"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation"/>
@@ -165,13 +165,13 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Ambiguity"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#BayesRule"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Camera"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#BayesRule"/>
     </Declaration>
     <Declaration>
         <Class IRI="#FusionSystem"/>
@@ -184,6 +184,9 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Dependency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#GivesDataInputTo"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#BeliefFunctions"/>
@@ -276,10 +279,10 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Sentence"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Sentence"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation"/>
@@ -291,10 +294,10 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Aleatory"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CredibilityDoubtful"/>
@@ -669,6 +672,16 @@ Current: v3</Literal>
         <NamedIndividual IRI="#Camera"/>
         <NamedIndividual IRI="#CargoCapitain"/>
     </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#GivesDataInputTo"/>
+        <NamedIndividual IRI="#Camera"/>
+        <NamedIndividual IRI="#MaritimeSensorReport"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#GivesDataInputTo"/>
+        <NamedIndividual IRI="#CargoCapitain"/>
+        <NamedIndividual IRI="#MaritimeSensorReport"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#usesource"/>
         <NamedIndividual IRI="#BayesRule"/>
@@ -717,6 +730,10 @@ Current: v3</Literal>
         <ObjectProperty IRI="#assesses"/>
         <ObjectProperty IRI="#isAssessedBy"/>
     </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#GivesDataInputTo"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#HasSource"/>
         <Class IRI="#DataInput"/>
