@@ -63,19 +63,19 @@ Current: v3</Literal>
         <ObjectProperty IRI="#HasSource"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
+        <ObjectProperty IRI="#IsSubjectOfEvaluationIn"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#IsSubjectOfEvaluationIn"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Ordinal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Ratio"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+        <Class IRI="#Ratio"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#IncompleteEvidence"/>
@@ -90,10 +90,10 @@ Current: v3</Literal>
         <NamedIndividual IRI="#CargoCapitain"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DST"/>
+        <ObjectProperty IRI="#IsEvaluationElementOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
+        <NamedIndividual IRI="#DST"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasCode"/>
@@ -126,22 +126,25 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DissonantEvidence"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#EvaluationMetric"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#OuputAssessedBy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Configurality"/>
+        <Class IRI="#EvaluationMetric"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CredibilityCannotBeJudged"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Configurality"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RhinoPoachingACSEvaluation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Logic"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Scalability"/>
@@ -162,10 +165,10 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#KnowledgeHandling"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CredibilityConfirmed"/>
@@ -183,16 +186,16 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#AmbiguousEvidence"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SystemComponent"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#SelfConfidence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemComponent"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Epistemic"/>
@@ -222,10 +225,10 @@ Current: v3</Literal>
         <ObjectProperty IRI="#ReadSource"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Evaluation"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#UnreliableEvidence"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#UnreliableEvidence"/>
+        <Class IRI="#Evaluation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Dependency"/>
@@ -270,10 +273,10 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Randomness"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DataProcessingTechnique"/>
+        <Class IRI="#SystemProcess"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SystemProcess"/>
+        <Class IRI="#DataProcessingTechnique"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isAssessedBy"/>
@@ -282,13 +285,16 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MaritimeEvidence02"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Traceability"/>
@@ -348,10 +354,10 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Aleatory"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CredibilityDoubtful"/>
@@ -372,13 +378,13 @@ Current: v3</Literal>
         <NamedIndividual IRI="#Uncertainity"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#STANAG2511Reliability"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Imprecision"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CredibilityImprobable"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#STANAG2511Reliability"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Subjective"/>
@@ -734,12 +740,20 @@ Current: v3</Literal>
         <NamedIndividual IRI="#Imprecision"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+        <NamedIndividual IRI="#Logic"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Evaluation"/>
         <NamedIndividual IRI="#MaritimeACSEvaluation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
         <NamedIndividual IRI="#MaritimeEvidence01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        <NamedIndividual IRI="#MaritimeEvidence02"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DataOutput"/>
@@ -825,6 +839,31 @@ Current: v3</Literal>
         <NamedIndividual IRI="#MaritimeEvidence01"/>
         <NamedIndividual IRI="#Epistemic"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DerivationOfUncertainty"/>
+        <NamedIndividual IRI="#MaritimeEvidence02"/>
+        <NamedIndividual IRI="#Objective"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasImperfection"/>
+        <NamedIndividual IRI="#MaritimeEvidence02"/>
+        <NamedIndividual IRI="#Imprecision"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasSource"/>
+        <NamedIndividual IRI="#MaritimeEvidence02"/>
+        <NamedIndividual IRI="#Logic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsEvaluationElementOf"/>
+        <NamedIndividual IRI="#MaritimeEvidence02"/>
+        <NamedIndividual IRI="#MaritimeACSEvaluation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#NatureOfUncertainty"/>
+        <NamedIndividual IRI="#MaritimeEvidence02"/>
+        <NamedIndividual IRI="#Epistemic"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#usesource"/>
         <NamedIndividual IRI="#BayesRule"/>
@@ -883,6 +922,21 @@ Current: v3</Literal>
         <DataProperty IRI="#TypeOfInformation"/>
         <NamedIndividual IRI="#MaritimeEvidence01"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Generic</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasPieceOfInformation"/>
+        <NamedIndividual IRI="#MaritimeEvidence02"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">If vessel A is not the fisihing vessel, then B is a fishing vessel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasUncertanitySupport"/>
+        <NamedIndividual IRI="#MaritimeEvidence02"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">(Obsevation space and decision space.)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TypeOfInformation"/>
+        <NamedIndividual IRI="#MaritimeEvidence02"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Generic Information from statistical Knowledge</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#DerivationOfUncertainty"/>
@@ -1129,6 +1183,11 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#MaritimeEvidence01</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Prior belief about the location of missing vessel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MaritimeEvidence02</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mapping Observation space to Decision space</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
