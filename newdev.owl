@@ -84,12 +84,15 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#IncompleteEvidence"/>
     </Declaration>
     <Declaration>
+<<<<<<< HEAD
         <Class IRI="#Information"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MaritimeEvidence10"/>
     </Declaration>
     <Declaration>
+=======
+>>>>>>> development
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment"/>
     </Declaration>
     <Declaration>
@@ -207,9 +210,6 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#SelfConfidence"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SystemComponent"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#MaritimePredictedVessel"/>
     </Declaration>
     <Declaration>
@@ -267,6 +267,9 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#FusionSystemComponent"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#UncertainEvidence"/>
     </Declaration>
     <Declaration>
@@ -277,9 +280,6 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Precision"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SystemProcess"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DataProcessingTechnique"/>
@@ -328,6 +328,9 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#DataInput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FusionSystemProcess"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Inconsistency"/>
@@ -435,15 +438,15 @@ Current: v3</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DataInput"/>
-        <Class IRI="#SystemProcess"/>
+        <Class IRI="#FusionSystemProcess"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DataOutput"/>
-        <Class IRI="#SystemProcess"/>
+        <Class IRI="#FusionSystemProcess"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DataProcessingTechnique"/>
-        <Class IRI="#SystemProcess"/>
+        <Class IRI="#FusionSystemProcess"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Dependency"/>
@@ -488,14 +491,6 @@ Current: v3</Literal>
     <SubClassOf>
         <Class IRI="#STANAG2511Reliability"/>
         <Class IRI="#STANAG2511"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SystemComponent"/>
-        <Class IRI="#EvaluationSubject"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SystemProcess"/>
-        <Class IRI="#EvaluationSubject"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy"/>
@@ -738,6 +733,10 @@ Current: v3</Literal>
     <ClassAssertion>
         <Class IRI="#Evaluation"/>
         <NamedIndividual IRI="#MaritimeACSEvaluation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataInput"/>
+        <NamedIndividual IRI="#MaritimeEvidence01"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
@@ -1204,10 +1203,6 @@ Current: v3</Literal>
         <Class IRI="#DataInput"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasInformation"/>
-        <Class IRI="#Information"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#isAssessedBy"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
     </ObjectPropertyRange>
@@ -1298,11 +1293,6 @@ Ability of an uncertainty representation to support combining uncertainty about 
         <IRI>#HigherOrderUncertainty</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[NOT REVIEWED as of GM55]
 Ability of the system to represent uncertainty about the uncertainty model, including parameters, structure, and/or type of  model. </Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Information</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">(Wikipedia) Information in its most restricted technical sense is an ordered sequence of symbols that can be interpreted as a message. Information can be recorded as signs, or transmitted as signals. Information is any kind of event that affects the state of a dynamic system. Conceptually, information is the message (utterance or expression) being conveyed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
