@@ -84,7 +84,7 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#IncompleteEvidence"/>
     </Declaration>
     <Declaration>
-<<<<<<< HEAD
+HEAD
         <Class IRI="#Information"/>
     </Declaration>
     <Declaration>
@@ -92,7 +92,7 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
 =======
->>>>>>> development
+development
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment"/>
     </Declaration>
     <Declaration>
