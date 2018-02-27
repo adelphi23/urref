@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl">
-    <Prefix name="" IRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl"/>
+    <Prefix name="" IRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -102,9 +102,6 @@ Current: v3</Literal>
         <NamedIndividual IRI="#CargoCapitain"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#DST"/>
     </Declaration>
     <Declaration>
@@ -118,9 +115,6 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#HasEvaluationElement"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ObservationalSensitivity"/>
@@ -141,10 +135,10 @@ Current: v3</Literal>
         <ObjectProperty IRI="#OuputAssessedBy"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#CredibilityCannotBeJudged"/>
+        <Class IRI="#Configurality"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Configurality"/>
+        <NamedIndividual IRI="#CredibilityCannotBeJudged"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MaritimeEvidence05"/>
@@ -265,6 +259,9 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasEvaluationSubject"/>
     </Declaration>
     <Declaration>
         <Class IRI="#STANAG2511Credibility"/>
@@ -415,9 +412,6 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CredibilityDoubtful"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#EvaluatesSubject"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#TypeOfInformation"/>
@@ -997,16 +991,6 @@ Current: v3</Literal>
         <NamedIndividual IRI="#User"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <NamedIndividual IRI="#MaritimeEvidence01"/>
-        <NamedIndividual IRI="#MaritimeACSEvaluation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#NatureOfUncertainty"/>
-        <NamedIndividual IRI="#MaritimeEvidence01"/>
-        <NamedIndividual IRI="#Aleatory"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
         <NamedIndividual IRI="#MaritimeEvidence01"/>
         <NamedIndividual IRI="#Epistemic"/>
@@ -1025,11 +1009,6 @@ Current: v3</Literal>
         <ObjectProperty IRI="#HasSource"/>
         <NamedIndividual IRI="#MaritimeEvidence02"/>
         <NamedIndividual IRI="#Logic"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <NamedIndividual IRI="#MaritimeEvidence02"/>
-        <NamedIndividual IRI="#MaritimeACSEvaluation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
@@ -1052,11 +1031,6 @@ Current: v3</Literal>
         <NamedIndividual IRI="#TrainingDataSet2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <NamedIndividual IRI="#MaritimeEvidence03"/>
-        <NamedIndividual IRI="#MaritimeACSEvaluation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
         <NamedIndividual IRI="#MaritimeEvidence03"/>
         <NamedIndividual IRI="#Aleatory"/>
@@ -1075,11 +1049,6 @@ Current: v3</Literal>
         <ObjectProperty IRI="#HasSource"/>
         <NamedIndividual IRI="#MaritimeEvidence04"/>
         <NamedIndividual IRI="#UsersEstimation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <NamedIndividual IRI="#MaritimeEvidence04"/>
-        <NamedIndividual IRI="#MaritimeACSEvaluation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
@@ -1102,11 +1071,6 @@ Current: v3</Literal>
         <NamedIndividual IRI="#AISDataSet"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <NamedIndividual IRI="#MaritimeEvidence05"/>
-        <NamedIndividual IRI="#MaritimeACSEvaluation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
         <NamedIndividual IRI="#MaritimeEvidence05"/>
         <NamedIndividual IRI="#Aleatory"/>
@@ -1125,11 +1089,6 @@ Current: v3</Literal>
         <ObjectProperty IRI="#HasSource"/>
         <NamedIndividual IRI="#MaritimeEvidence06"/>
         <NamedIndividual IRI="#AISDataSet"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <NamedIndividual IRI="#MaritimeEvidence06"/>
-        <NamedIndividual IRI="#MaritimeACSEvaluation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
@@ -1152,11 +1111,6 @@ Current: v3</Literal>
         <NamedIndividual IRI="#Lloyds"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <NamedIndividual IRI="#MaritimeEvidence07"/>
-        <NamedIndividual IRI="#MaritimeACSEvaluation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
         <NamedIndividual IRI="#MaritimeEvidence07"/>
         <NamedIndividual IRI="#Aleatory"/>
@@ -1170,11 +1124,6 @@ Current: v3</Literal>
         <ObjectProperty IRI="#HasSource"/>
         <NamedIndividual IRI="#MaritimeEvidence08"/>
         <NamedIndividual IRI="#NA"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <NamedIndividual IRI="#MaritimeEvidence08"/>
-        <NamedIndividual IRI="#MaritimeACSEvaluation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
@@ -1535,20 +1484,12 @@ Current: v3</Literal>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#HasEvaluationElement"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#IsSubjectOfEvaluationIn"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#HasEvaluationElement"/>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
+        <ObjectProperty IRI="#HasEvaluationSubject"/>
+        <ObjectProperty IRI="#IsSubjectOfEvaluationIn"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#OuputAssessedBy"/>
@@ -1561,20 +1502,19 @@ Current: v3</Literal>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#DerivationOfUncertainty"/>
     </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#NatureOfUncertainty"/>
+    </FunctionalObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#DerivationOfUncertainty"/>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#EvaluatesSubject"/>
-        <Class IRI="#Evaluation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#GivesDataInputTo"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#HasEvaluationElement"/>
+        <ObjectProperty IRI="#HasEvaluationSubject"/>
         <Class IRI="#Evaluation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1590,12 +1530,20 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        <ObjectProperty IRI="#IsSubjectOfEvaluationIn"/>
+        <Class IRI="#FusionSystem"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#IsSubjectOfEvaluationIn"/>
-        <Class IRI="#FusionSystem"/>
+        <Class IRI="#Information"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsSubjectOfEvaluationIn"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsSubjectOfEvaluationIn"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyModel"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
@@ -1634,8 +1582,20 @@ Current: v3</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#EvaluatesSubject"/>
+        <ObjectProperty IRI="#HasEvaluationSubject"/>
         <Class IRI="#FusionSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HasEvaluationSubject"/>
+        <Class IRI="#Information"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HasEvaluationSubject"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HasEvaluationSubject"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyModel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#HasImperfection"/>
@@ -1644,10 +1604,6 @@ Current: v3</Literal>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#HasSource"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#IsEvaluationElementOf"/>
-        <Class IRI="#Evaluation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#IsSubjectOfEvaluationIn"/>
@@ -1758,6 +1714,11 @@ Ability of an uncertainty representation to support combining uncertainty about 
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#Dependency</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ability of the uncertainty representation to capture dependency among propositions (e.g., cause and effect, relevance, statistical association).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EvaluationSubject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Evaluation Subject is an item which can be assessed according to the criteria defined in the URREF ontology.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
