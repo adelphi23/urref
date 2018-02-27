@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl">
-    <Prefix name="" IRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl#"/>
+    <Prefix name="" IRI="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -258,10 +258,10 @@ Current: v3</Literal>
         <Class IRI="#Relational"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy"/>
+        <ObjectProperty IRI="#HasEvaluationSubject"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#HasEvaluationSubject"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy"/>
     </Declaration>
     <Declaration>
         <Class IRI="#STANAG2511Credibility"/>
@@ -271,6 +271,9 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ATR"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasUncertaintySupport"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
@@ -321,6 +324,9 @@ Current: v3</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Traceability"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DecisionSpace"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Incompleteness"/>
     </Declaration>
     <Declaration>
@@ -337,6 +343,9 @@ Current: v3</Literal>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Vagueness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UncertaintySupport"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#FusionAlgorithm"/>
@@ -744,6 +753,10 @@ Current: v3</Literal>
         <NamedIndividual IRI="#DST"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#UncertaintySupport"/>
+        <NamedIndividual IRI="#DecisionSpace"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature"/>
         <NamedIndividual IRI="#Epistemic"/>
     </ClassAssertion>
@@ -989,6 +1002,11 @@ Current: v3</Literal>
         <ObjectProperty IRI="#HasSource"/>
         <NamedIndividual IRI="#MaritimeEvidence01"/>
         <NamedIndividual IRI="#User"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasUncertaintySupport"/>
+        <NamedIndividual IRI="#MaritimeEvidence01"/>
+        <NamedIndividual IRI="#DecisionSpace"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
@@ -1286,15 +1304,6 @@ Current: v3</Literal>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Is likely that the missing vessel is A</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Decision space (A,B)</Literal>
-        </Annotation>
-        <DataProperty IRI="#HasUncertanitySupport"/>
-        <NamedIndividual IRI="#MaritimeEvidence01"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#TypeOfInformation"/>
         <NamedIndividual IRI="#MaritimeEvidence01"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Generic</Literal>
@@ -1503,6 +1512,9 @@ Current: v3</Literal>
         <ObjectProperty IRI="#DerivationOfUncertainty"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="#HasUncertaintySupport"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#NatureOfUncertainty"/>
     </FunctionalObjectProperty>
     <ObjectPropertyDomain>
@@ -1527,6 +1539,10 @@ Current: v3</Literal>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#HasSource"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HasUncertaintySupport"/>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1604,6 +1620,10 @@ Current: v3</Literal>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#HasSource"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HasUncertaintySupport"/>
+        <Class IRI="#UncertaintySupport"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#IsSubjectOfEvaluationIn"/>
