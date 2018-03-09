@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1510940718574" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v2.owl" uri="URREF_v2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1510940718574" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v2.owl" uri="URREF_v2b.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1510940718574" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v2.owl" uri="URREF_v2c.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1510940718574" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v2.owl" uri="URREF_v2d.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1510940718574" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl" uri="URREF-NewDev.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1510940718574" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl" uri="URREF.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1510940718574" name="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl" uri="URREF_v1.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1510940718574" name="http://www.owl-ontologies.com/Ontology1181490123.owl" uri="URREF_v02OLD.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519771694462" name="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl" uri="URREF.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519771694462" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v2.owl" uri="URREF_v2d.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519771694462" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v2.owl" uri="URREF_v2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519771694462" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v2.owl" uri="URREF_v2b.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519771694462" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v2.owl" uri="URREF_v2c.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519771694462" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl" uri="URREF_Ontology_NewDev.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519771694462" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl" uri="URREF-NewDev.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519771694462" name="duplicate:http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v3.owl" uri="URREF_V3OLD.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519771694462" name="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl" uri="URREF_v1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1519771694462" name="http://www.owl-ontologies.com/Ontology1181490123.owl" uri="URREF_v02OLD.owl"/>
     </group>
 </catalog>
