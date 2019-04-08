@@ -13,6 +13,10 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This is version 3c, currently in the development branch</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal xml:lang="en">v2a: ETURWG GM40
 v2b: ETURWG GM41
@@ -20,13 +24,11 @@ v2c: ETURWG GM49
 v2d: ETURWG GM55
 v3: ETURWG GM83
 v3a: ETURWG GM90
-Current: v3b</Literal>
+V3b: ...
+Current: v3c</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="#Configurality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DataHandlingCriterion"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DecisionProcess"/>
@@ -41,13 +43,10 @@ Current: v3b</Literal>
         <Class IRI="#EpistemicVariable"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Evaluation"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#EvaluationMetric"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#EvaluationSubject"/>
+        <Class IRI="#EvaluationProcedure"/>
     </Declaration>
     <Declaration>
         <Class IRI="#FusionSystem"/>
@@ -63,6 +62,9 @@ Current: v3b</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InformationHandlingCriterion"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Interval"/>
@@ -104,7 +106,10 @@ Current: v3b</Literal>
         <Class IRI="#UncertainVariable"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#UncertaintyRepresentation"/>
+        <Class IRI="#UncertaintyModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UncertaintyReasoning"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy"/>
@@ -131,13 +136,13 @@ Current: v3b</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation"/>
@@ -212,31 +217,7 @@ Current: v3b</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#DerivationOfUncertainty"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#GivesDataInputTo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#HasImperfection"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#HasSource"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#HasSubject"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#IsSubjectOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#NatureOfUncertainty"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#OuputAssessedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#QualityAssesses"/>
+        <ObjectProperty IRI="#IsAssessedOnQualityBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#ReadSource"/>
@@ -245,10 +226,31 @@ Current: v3b</Literal>
         <ObjectProperty IRI="#assesses"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#assessesQualityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDerivationOfUncertainty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEvaluationSubject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasImperfection"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasScale"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasSource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUncertaintyNature"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isAssessedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEvaluationSubjectOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isMeasuredBy"/>
@@ -257,10 +259,10 @@ Current: v3b</Literal>
         <ObjectProperty IRI="#isScaleOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#measures"/>
+        <ObjectProperty IRI="#isSourceOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#providesInputTo"/>
+        <ObjectProperty IRI="#measures"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#HasPieceOfInformation"/>
@@ -332,6 +334,9 @@ Current: v3b</Literal>
         <NamedIndividual IRI="#Inconsistency"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#NN"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#None"/>
     </Declaration>
     <Declaration>
@@ -356,6 +361,9 @@ Current: v3b</Literal>
         <NamedIndividual IRI="#Subjective"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#SubjectiveLogic"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Uncertainity"/>
     </Declaration>
     <Declaration>
@@ -370,10 +378,6 @@ Current: v3b</Literal>
     <SubClassOf>
         <Class IRI="#Configurality"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DataHandlingCriterion"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DecisionProcess"/>
@@ -394,6 +398,10 @@ Current: v3b</Literal>
     <SubClassOf>
         <Class IRI="#Inclusiveness"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InformationHandlingCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Interval"/>
@@ -465,19 +473,19 @@ Current: v3b</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation"/>
-        <Class IRI="#DataHandlingCriterion"/>
+        <Class IRI="#InformationHandlingCriterion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#KnowledgeHandling"/>
@@ -501,7 +509,7 @@ Current: v3b</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
@@ -509,7 +517,7 @@ Current: v3b</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
@@ -537,7 +545,7 @@ Current: v3b</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Traceability"/>
-        <Class IRI="#DataHandlingCriterion"/>
+        <Class IRI="#InformationHandlingCriterion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Veracity"/>
@@ -545,19 +553,19 @@ Current: v3b</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
     </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="#DataHandlingCriterion"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
-    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DecisionProcess"/>
         <Class IRI="#ModelProcess"/>
         <Class IRI="#ReasoningProcess"/>
         <Class IRI="#SourceProcess"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#InformationHandlingCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility"/>
@@ -575,6 +583,10 @@ Current: v3b</Literal>
     <ClassAssertion>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
         <NamedIndividual IRI="#Ambiguity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UncertaintyReasoning"/>
+        <NamedIndividual IRI="#BayesRule"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory"/>
@@ -609,6 +621,10 @@ Current: v3b</Literal>
         <NamedIndividual IRI="#Inconsistency"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#UncertaintyModel"/>
+        <NamedIndividual IRI="#NN"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
         <NamedIndividual IRI="#None"/>
     </ClassAssertion>
@@ -641,12 +657,24 @@ Current: v3b</Literal>
         <NamedIndividual IRI="#Subjective"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory"/>
+        <NamedIndividual IRI="#SubjectiveLogic"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
         <NamedIndividual IRI="#Uncertainity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
         <NamedIndividual IRI="#Vagueness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UncertaintyModel"/>
+        <NamedIndividual IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#BN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UncertaintyModel"/>
+        <NamedIndividual IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="#Ambiguity"/>
@@ -655,11 +683,6 @@ Current: v3b</Literal>
         <NamedIndividual IRI="#Randomness"/>
         <NamedIndividual IRI="#Vagueness"/>
     </DifferentIndividuals>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#usesource"/>
-        <NamedIndividual IRI="#BayesRule"/>
-        <Literal></Literal>
-    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasCode"/>
         <NamedIndividual IRI="#CredibilityCannotBeJudged"/>
@@ -690,92 +713,83 @@ Current: v3b</Literal>
         <NamedIndividual IRI="#CredibilityProbablyTrue"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
     </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#usesource"/>
-        <NamedIndividual IRI="#DST"/>
-        <Literal></Literal>
-    </DataPropertyAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#DerivationOfUncertainty"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="#IsAssessedOnQualityBy"/>
+        <ObjectProperty IRI="#isAssessedBy"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#IsSubjectOf"/>
+        <ObjectProperty IRI="#assessesQualityOf"/>
+        <ObjectProperty IRI="#assesses"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDerivationOfUncertainty"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasScale"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#HasSubject"/>
-        <ObjectProperty IRI="#IsSubjectOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#OuputAssessedBy"/>
-        <ObjectProperty IRI="#QualityAssesses"/>
-    </InverseObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isEvaluationSubjectOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#assesses"/>
         <ObjectProperty IRI="#isAssessedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasEvaluationSubject"/>
+        <ObjectProperty IRI="#isEvaluationSubjectOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasScale"/>
         <ObjectProperty IRI="#isScaleOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSource"/>
+        <ObjectProperty IRI="#isSourceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#isMeasuredBy"/>
         <ObjectProperty IRI="#measures"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#DerivationOfUncertainty"/>
+        <ObjectProperty IRI="#hasDerivationOfUncertainty"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#NatureOfUncertainty"/>
+        <ObjectProperty IRI="#hasUncertaintyNature"/>
     </FunctionalObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#DerivationOfUncertainty"/>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#GivesDataInputTo"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#HasImperfection"/>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#HasSource"/>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#HasSubject"/>
-        <Class IRI="#Evaluation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#IsSubjectOf"/>
-        <Class IRI="#EvaluationSubject"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#NatureOfUncertainty"/>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#QualityAssesses"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#assesses"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#assessesQualityOf"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDerivationOfUncertainty"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEvaluationSubject"/>
+        <Class IRI="#EvaluationProcedure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasImperfection"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasScale"/>
         <Class IRI="#EvaluationMetric"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isAssessedBy"/>
-        <Class IRI="#EvaluationSubject"/>
+        <ObjectProperty IRI="#hasSource"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUncertaintyNature"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isMeasuredBy"/>
@@ -786,56 +800,44 @@ Current: v3b</Literal>
         <Class IRI="#TypeOfScale"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSourceOf"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#measures"/>
         <Class IRI="#EvaluationMetric"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#providesInputTo"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#DerivationOfUncertainty"/>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#HasImperfection"/>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#HasSource"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#HasSubject"/>
-        <Class IRI="#EvaluationSubject"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#IsSubjectOf"/>
-        <Class IRI="#Evaluation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#NatureOfUncertainty"/>
-        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#OuputAssessedBy"/>
-        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
-    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#ReadSource"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#assesses"/>
-        <Class IRI="#EvaluationSubject"/>
+        <ObjectProperty IRI="#hasDerivationOfUncertainty"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasImperfection"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasScale"/>
         <Class IRI="#TypeOfScale"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSource"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUncertaintyNature"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isAssessedBy"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEvaluationSubjectOf"/>
+        <Class IRI="#EvaluationProcedure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isMeasuredBy"/>
@@ -844,6 +846,10 @@ Current: v3b</Literal>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isScaleOf"/>
         <Class IRI="#EvaluationMetric"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSourceOf"/>
+        <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#measures"/>
@@ -886,6 +892,11 @@ Current: v3b</Literal>
         <Literal xml:lang="en">Is a evaluation technique in maritime usecase</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BayesRule</IRI>
+        <Literal>Bayes Rule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#Configurality</IRI>
         <Literal>Ability of an uncertainty representation to support combining uncertainty about many propositions and/or variables, of different types, with different types of uncertainty.</Literal>
@@ -922,18 +933,8 @@ Current: v3b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>#DataHandlingCriterion</IRI>
-        <Literal>Ability of a Fusion System to manage data.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#Dependency</IRI>
         <Literal>Ability of the uncertainty representation to capture dependency among propositions (e.g., cause and effect, relevance, statistical association).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#EvaluationSubject</IRI>
-        <Literal xml:lang="en">Item which can be assessed through the Uncertainty Representation and Reasoning Evaluation Framework according to the URREF evaluation criteria (defined in the EvaluationCriterion class)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -947,6 +948,16 @@ Current: v3b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#InformationHandlingCriterion</IRI>
+        <Literal>Ability of a Fusion System to manage data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NN</IRI>
+        <Literal>Neural Network</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#Outcomes</IRI>
         <Literal>Ability to represent and distinguish between different kinds of outcomes, as defined by the TypeOfScale, for UncertainVariables (e.g., Boolean, qualitative categorical, ordinal, discrete numerical, continuous).</Literal>
     </AnnotationAssertion>
@@ -954,6 +965,16 @@ Current: v3b</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#Relational</IRI>
         <Literal>Ability to represent uncertainty about domains with relational structure, e.g.,   attribute value uncertainty; reference uncertainty; type uncertainty; existence uncertainty.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#UncertaintyModel</IRI>
+        <Literal>A set of functions from an uncertainty theory that map things of a domain to the associated uncertainty about those things.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#UncertaintyReasoning</IRI>
+        <Literal>Rule or set of rules used to perform uncertainty reasoning to the various elements of an uncertainty model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -973,17 +994,17 @@ Current: v3b</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#BN</IRI>
-        <Literal xml:lang="en">Bayesian Networks</Literal>
+        <Literal xml:lang="en">Bayesian networks are a powerful graphical language for representing probabilistic relationships among large numbers of uncertain hypotheses. They have been applied to a wide variety of problems including medical diagnosis, classification systems, multi-sensor fusion, and legal analysis for trials.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#BN</IRI>
-        <Literal xml:lang="en">Bayesian networks are a powerful graphical language for representing probabilistic relationships among large numbers of uncertain hypotheses. They have been applied to a wide variety of problems including medical diagnosis, classification systems, multi-sensor fusion, and legal analysis for trials.</Literal>
+        <Literal xml:lang="en">Bayesian Network</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility</IRI>
-        <Literal>Measure of how compatible a given knowledge representation is to data standards, and should be related to the degree of flexibility it has in being coded with various standards.</Literal>
+        <Literal>degree of which a given knowledge representation is in compliance to data standards. It can also be seen as the flexibility it has of being coded with various standards.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -993,22 +1014,17 @@ Current: v3b</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Consistency</IRI>
-        <Literal>Measure of the ability of the reasoning process to produce the same results when provided with the same data under the same conditions.</Literal>
+        <Literal>Ability of the reasoning process to produce the same results when provided with the same data under the same conditions.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness</IRI>
-        <Literal>Measure of the ability to produce correct results. In cases where there is no ground truth to establish a correct answer (including a simulated ground truth), the reasoning process can still be evaluated in terms of how its answers correspond to a gold standard (e.g. SMEs, documentation, etc.)</Literal>
+        <Literal>Ability to produce correct results. In cases where there is no ground truth to establish a correct answer (including a simulated ground truth), the reasoning process can still be evaluated in terms of how its answers correspond to a gold standard (e.g. SMEs, documentation, etc.)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility</IRI>
         <Literal>Extent to which information can be believed or accepted as true, real, or honest.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#DataCriterion</IRI>
-        <Literal>Evaluation Criteria that concern aspects of data and their relationship to source, the object being reported upon, and the objectives of the fusion process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1022,16 +1038,21 @@ Current: v3b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion</IRI>
+        <Literal>Evaluation Criteria that concern aspects of data and their relationship to source, the object being reported upon, and the objectives of the fusion process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation</IRI>
         <Literal>Ability of a fusion system to support a coherent explanation that can be used to guide assessment, to understand the system&apos;s conclusions, and to provide a basis for reasoning and action.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#KnowledgeHandling</IRI>
-        <Literal xml:lang="en">Measure the ability of a given uncertainty representation technique to convey knowledge.</Literal>
+        <Literal xml:lang="en">Ability of a given uncertainty representation technique to convey knowledge.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN</IRI>
         <Literal xml:lang="en">Multi-Entity Bayesian Networks</Literal>
     </AnnotationAssertion>
@@ -1068,7 +1089,7 @@ Current: v3b</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem</IRI>
-        <Literal>Measure the degree to which an evaluation subject has direct bearing on the objectives of the fusion process. </Literal>
+        <Literal>Degree of which an evaluation subject has direct bearing on the objectives of the fusion process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1078,12 +1099,12 @@ Current: v3b</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Scalability</IRI>
-        <Literal>Measure of the ability to handle a growing amount of work in a capable manner or its ability to be enlarged to accommodate that growth.</Literal>
+        <Literal>Ability to handle a growing amount of work in a capable manner or its ability to be enlarged to accommodate that growth.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#SelfConfidence</IRI>
-        <Literal>Measure of the evaluation subject&apos;s assessment of its own credibility.</Literal>
+        <Literal>Sensor&apos;s assessment of its own credibility. This is mostly applicabe to human reports.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1098,12 +1119,12 @@ Current: v3b</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput</IRI>
-        <Literal>Measure of the average (and possibly peak) rate of conversion of inputs to outputs.</Literal>
+        <Literal>Average (and possibly peak) rate of conversion of inputs to outputs.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Timeliness</IRI>
-        <Literal>Measure of the ability to produce results within a required timeframe.</Literal>
+        <Literal>Ability to produce results within a required timeframe.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1113,12 +1134,12 @@ Current: v3b</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Veracity</IRI>
-        <Literal>Measure of the extent to which a source reports what it assesses to be the case.</Literal>
+        <Literal>Extent to which a source reports what it assesses to be the case.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence</IRI>
-        <Literal>Measure of the degree of impact of an evaluation subject on the result of fusion. </Literal>
+        <Literal>Degree of impact of an evaluation subject on the result of fusion.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

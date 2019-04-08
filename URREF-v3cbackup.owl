@@ -1,0 +1,1109 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#"
+     xml:base="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl">
+        <rdfs:comment xml:lang="en">This is version 3c, currently in the development branch</rdfs:comment>
+        <owl:versionInfo xml:lang="en">v2a: ETURWG GM40
+v2b: ETURWG GM41
+v2c: ETURWG GM49
+v2d: ETURWG GM55
+v3: ETURWG GM83
+v3a: ETURWG GM90
+V3b: ...
+Current: v3c</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#IsAssessedOnQualityBy -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#IsAssessedOnQualityBy">
+        <rdfs:subPropertyOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isAssessedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#ReadSource -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#ReadSource">
+        <rdfs:range rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#assesses -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#assesses">
+        <owl:inverseOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isAssessedBy"/>
+        <rdfs:domain rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#assessesQualityOf -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#assessesQualityOf">
+        <rdfs:subPropertyOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#assesses"/>
+        <rdfs:domain rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasDerivationOfUncertainty -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasDerivationOfUncertainty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasEvaluationSubject -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasEvaluationSubject">
+        <owl:inverseOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isEvaluationSubjectOf"/>
+        <rdfs:domain rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationProcedure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasImperfection -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasImperfection">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasScale -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasScale">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isScaleOf"/>
+        <rdfs:domain rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationMetric"/>
+        <rdfs:range rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#TypeOfScale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasSource">
+        <owl:inverseOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isSourceOf"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        <rdfs:range rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasUncertaintyNature -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasUncertaintyNature">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isAssessedBy -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isAssessedBy">
+        <rdfs:range rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isEvaluationSubjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isEvaluationSubjectOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationProcedure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isMeasuredBy">
+        <owl:inverseOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#measures"/>
+        <rdfs:domain rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+        <rdfs:range rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationMetric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isScaleOf -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isScaleOf">
+        <rdfs:domain rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#TypeOfScale"/>
+        <rdfs:range rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationMetric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isSourceOf -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#isSourceOf">
+        <rdfs:domain rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#measures -->
+
+    <owl:ObjectProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#measures">
+        <rdfs:domain rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationMetric"/>
+        <rdfs:range rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#HasPieceOfInformation -->
+
+    <owl:DatatypeProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#HasPieceOfInformation">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#HasUncertanitySupport -->
+
+    <owl:DatatypeProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#HasUncertanitySupport">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#TypeOfInformation -->
+
+    <owl:DatatypeProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#TypeOfInformation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasCode -->
+
+    <owl:DatatypeProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#hasCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#usesource -->
+
+    <owl:DatatypeProperty rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#usesource"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Configurality -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Configurality">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
+        <rdfs:isDefinedBy>Ability of an uncertainty representation to support combining uncertainty about many propositions and/or variables, of different types, with different types of uncertainty.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#DecisionProcess -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#DecisionProcess">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SystemProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Dependency -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Dependency">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
+        <rdfs:isDefinedBy>Ability of the uncertainty representation to capture dependency among propositions (e.g., cause and effect, relevance, statistical association).</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#ElementaryFusionProcess -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#ElementaryFusionProcess"/>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EpistemicVariable -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EpistemicVariable">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#UncertainVariable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationMetric -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationMetric"/>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationProcedure -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationProcedure"/>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#FusionSystem -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#FusionSystem"/>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#FusionSystemComponent -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#FusionSystemComponent"/>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#HigherOrderUncertainty -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#HigherOrderUncertainty">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
+        <rdfs:isDefinedBy>Ability of the system to represent uncertainty about the uncertainty model, including parameters, structure, and/or type of  model.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Inclusiveness -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Inclusiveness">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
+        <rdfs:comment>Ability to capture and distinguish between different types of uncertainty, among the ones defined by the UncertaintyType class.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Information -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Information"/>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#InformationHandlingCriterion -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#InformationHandlingCriterion">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+        <rdfs:isDefinedBy>Ability of a Fusion System to manage data.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Interval -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Interval">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#TypeOfScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#ModelProcess -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#ModelProcess">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SystemProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Nominal -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Nominal">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#TypeOfScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Ordinal -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Ordinal">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#TypeOfScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Outcomes -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Outcomes">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
+        <rdfs:isDefinedBy>Ability to represent and distinguish between different kinds of outcomes, as defined by the TypeOfScale, for UncertainVariables (e.g., Boolean, qualitative categorical, ordinal, discrete numerical, continuous).</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#RandomVariable -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#RandomVariable">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#UncertainVariable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Ratio -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Ratio">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#TypeOfScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#ReasoningProcess -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#ReasoningProcess">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SystemProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Relational -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Relational">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
+        <rdfs:isDefinedBy>Ability to represent uncertainty about domains with relational structure, e.g.,   attribute value uncertainty; reference uncertainty; type uncertainty; existence uncertainty.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SourceProcess -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SourceProcess">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SystemProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SystemProcess -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SystemProcess"/>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#TypeOfScale -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#TypeOfScale"/>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#UncertainVariable -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#UncertainVariable"/>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#UncertaintyModel -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#UncertaintyModel">
+        <rdfs:isDefinedBy>A set of functions from an uncertainty theory that map things of a domain to the associated uncertainty about those things.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#UncertaintyReasoning -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#UncertaintyReasoning">
+        <rdfs:isDefinedBy>Rule or set of rules used to perform uncertainty reasoning to the various elements of an uncertainty model.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
+        <rdfs:isDefinedBy>Closeness of agreement between an evaluation subject value and the true value of the quantity or quality being evaluated.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
+        <rdfs:isDefinedBy>Ability of the representational model to allow for different configurations of the model. </rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
+        <rdfs:isDefinedBy>Ability of the system to handle the types of uncertainty assessments (e.g., verbal, quantitative, combined) needed for a given problem, and to distinguish them from one another.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
+        <owl:disjointWith rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness"/>
+        <rdfs:isDefinedBy>degree of which a given knowledge representation is in compliance to data standards. It can also be seen as the flexibility it has of being coded with various standards.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
+        <rdfs:isDefinedBy>How much of the IF system’s computational resources are required by a given Fusion Algorithm to produce its results.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Consistency -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Consistency">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
+        <rdfs:isDefinedBy>Ability of the reasoning process to produce the same results when provided with the same data under the same conditions.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ability to produce correct results. In cases where there is no ground truth to establish a correct answer (including a simulated ground truth), the reasoning process can still be evaluated in terms of how its answers correspond to a gold standard (e.g. SMEs, documentation, etc.)</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
+        <rdfs:isDefinedBy>Extent to which information can be believed or accepted as true, real, or honest.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion">
+        <rdfs:isDefinedBy>Encompasses all the different aspects that must be considered when evaluating uncertainty handling in multi-sensor fusion systems</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
+        <owl:priorVersion>Ability of a knowledge representation formalism to convey all relevant aspects of a given fusion problem.</owl:priorVersion>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+        <rdfs:isDefinedBy>Evaluation Criteria that concern aspects of data and their relationship to source, the object being reported upon, and the objectives of the fusion process.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#InformationHandlingCriterion"/>
+        <rdfs:isDefinedBy>Ability of a fusion system to support a coherent explanation that can be used to guide assessment, to understand the system&apos;s conclusions, and to provide a basis for reasoning and action.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#KnowledgeHandling -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#KnowledgeHandling">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
+        <rdfs:isDefinedBy xml:lang="en">Ability of a given uncertainty representation technique to convey knowledge.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
+        <rdfs:isDefinedBy>Extent to which information is reported about a matter of fact in an unbiased manner.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ObservationalSensitivity -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ObservationalSensitivity">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
+        <rdfs:isDefinedBy>Quotient of the change in a result of evaluation subject  and the corresponding change in a value of a quality being observed.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
+        <rdfs:isDefinedBy>Ability of the Fusion Algorithm to handle the functional requirements of an information fusion system. Other system architecture factors also affect these criteria.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Precision -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Precision">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
+        <rdfs:isDefinedBy>Closeness of agreement between indications or measured quantity values obtained by replicate measurements on the same or similar evaluation subjects under specified conditions </rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
+        <rdfs:isDefinedBy>Ability to assess the degree of informational quality of the data</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+        <rdfs:isDefinedBy>Encompasses criteria directly affecting how an information fusion system transforms its input data into knowledge. It can also be called as process or inference criteria, as it deals with how the uncertainty model performs operations with information.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
+        <rdfs:isDefinedBy>Degree of which an evaluation subject has direct bearing on the objectives of the fusion process.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+        <rdfs:isDefinedBy>Encompasses criteria related to how uncertainty is characterized, captured and stored in a manner that can be processed by the fusion system. </rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Scalability -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Scalability">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
+        <rdfs:isDefinedBy>Ability to handle a growing amount of work in a capable manner or its ability to be enlarged to accommodate that growth.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#SelfConfidence -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#SelfConfidence">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
+        <rdfs:isDefinedBy>Sensor&apos;s assessment of its own credibility. This is mostly applicabe to human reports.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Simplicity -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Simplicity">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
+        <rdfs:isDefinedBy>Assesses the information system&apos;s ability to execute common operations without requiring deep knowledge about its inner details. </rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source">
+        <rdfs:comment xml:lang="en">A source is the origin of the information.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance"/>
+        <rdfs:isDefinedBy>Average (and possibly peak) rate of conversion of inputs to outputs.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Timeliness -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Timeliness">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance"/>
+        <rdfs:isDefinedBy>Ability to produce results within a required timeframe.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Traceability -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Traceability">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#InformationHandlingCriterion"/>
+        <rdfs:isDefinedBy>Ability of a fusion system to provide an accurate and unbroken historical record of its inputs and the chain of operations that led to its conclusions.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Veracity -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Veracity">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
+        <rdfs:isDefinedBy>Extent to which a source reports what it assesses to be the case.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence -->
+
+    <owl:Class rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence">
+        <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
+        <rdfs:isDefinedBy>Degree of impact of an evaluation subject on the result of fusion.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence">
+        <rdfs:comment xml:lang="en">An expression in some logical language that evaluates to a truth-value (formula, axiom, assertion). It is then assumed that information will be presented in the form of sentences. So the uncertainty will be associated with sentences.</rdfs:comment>
+        <rdfs:comment>Evidence, for the purpose of this ontology is considered to be equivalent to:
+- Sentence
+- Information</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/Uncertainty.owl</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation">
+        <rdfs:comment xml:lang="en">Uncertainty derivation refers to the way it can be assessed. That is, how the uncertainty metrics can be derived.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature">
+        <rdfs:comment xml:lang="en">This captures the information about the nature of the uncertainty, i.e., whether the uncertainty is inherent in the phenomenon expressed by the sentence, or it is the result of lack of knowledge of the agent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType">
+        <rdfs:comment>For the purposes of this ontology, Uncertainty type is equivalent to:
+- type of imperfection</rdfs:comment>
+        <rdfs:comment xml:lang="en">Uncertainty Type is a concept that focuses on underlying characteristics of the information that make it uncertain. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Aleatory -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Aleatory">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Ambiguity -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Ambiguity">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#BayesRule -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#BayesRule">
+        <usesource></usesource>
+        <rdfs:comment xml:lang="en">Is a evaluation technique in maritime usecase</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#BayesianNetwork -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#BayesianNetwork">
+        <rdf:type rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#UncertaintyModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#BayesianProbabilityTheory -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#BayesianProbabilityTheory">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityCannotBeJudged -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityCannotBeJudged">
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</hasCode>
+        <rdfs:comment xml:lang="en">If its truth cannot be judged</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityConfirmed -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityConfirmed">
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasCode>
+        <rdfs:comment xml:lang="en">If it can be stated with certainty that the reported information originates from another source than the already existing information on the same object</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityDoubtful -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityDoubtful">
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasCode>
+        <rdfs:comment xml:lang="en">An item of information which tends to conflict with the previously reported or establish behavior pattern of an intelligence target</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityImprobable -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityImprobable">
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</hasCode>
+        <rdfs:comment xml:lang="en">An item of information which positively contradicts previously reported information of conflicts with the established behavior pattern of an intelligence target in a marked degree</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityPossiblyTrue -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityPossiblyTrue">
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasCode>
+        <rdfs:comment xml:lang="en">If insufficient confirmation to establish any higher degree of likelihood, a freshly reported item of information does not conflict with the previously reported target behavior</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityProbablyTrue -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#CredibilityProbablyTrue">
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasCode>
+        <rdfs:comment xml:lang="en">If the independence of the source cannot be guaranteed, but if, from the quantity and quality of previous reports, its likelihood is nevertheless regarded as sufficiently established</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#DST -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#DST">
+        <usesource></usesource>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Epistemic -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Epistemic">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvidenceTheory -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvidenceTheory">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#F1_Measure -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#F1_Measure">
+        <rdf:type rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationMetric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#FuzzySetTheory -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#FuzzySetTheory">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Imprecision -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Imprecision">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Incompleteness -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Incompleteness">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Inconsistency -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Inconsistency">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#NeuralNetwork -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#NeuralNetwork">
+        <rdf:type rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#UncertaintyModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#None -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#None">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Objective -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Objective">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#PossibilityTheory -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#PossibilityTheory">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Randomness -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Randomness">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#RoughSetTheory -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#RoughSetTheory">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#STANAG_Credibility -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#STANAG_Credibility">
+        <rdf:type rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationMetric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#STANAG_Reliability -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#STANAG_Reliability">
+        <rdf:type rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#EvaluationMetric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Subjective -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Subjective">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SubjectiveLogic -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SubjectiveLogic">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Uncertainity -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Uncertainity">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Vagueness -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Vagueness">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#BN -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#BN">
+        <rdfs:comment xml:lang="en">Bayesian Networks</rdfs:comment>
+        <rdfs:comment xml:lang="en">Bayesian networks are a powerful graphical language for representing probabilistic relationships among large numbers of uncertain hypotheses. They have been applied to a wide variety of problems including medical diagnosis, classification systems, multi-sensor fusion, and legal analysis for trials.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN -->
+
+    <owl:NamedIndividual rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN">
+        <rdfs:comment xml:lang="en">Multi-Entity Bayesian Networks</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#DecisionProcess"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#ModelProcess"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#ReasoningProcess"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#SourceProcess"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#InformationHandlingCriterion"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Ambiguity"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Incompleteness"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Inconsistency"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Randomness"/>
+            <rdf:Description rdf:about="http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Vagueness"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
