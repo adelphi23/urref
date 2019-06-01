@@ -229,6 +229,9 @@ Current: v3c</Literal>
         <ObjectProperty IRI="#assessesQualityOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasCriteria"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDerivationOfUncertainty"/>
     </Declaration>
     <Declaration>
@@ -238,7 +241,13 @@ Current: v3c</Literal>
         <ObjectProperty IRI="#hasImperfection"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasPrimaryEvaluationSubject"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasScale"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSecondaryEvaluationSubject"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSource"/>
@@ -250,13 +259,22 @@ Current: v3c</Literal>
         <ObjectProperty IRI="#isAssessedBy"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isCriteriaIn"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isEvaluationSubjectOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isMeasuredBy"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isPrimaryEvaluationSubjectOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isScaleOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSecondaryEvaluationSubjectOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isSourceOf"/>
@@ -722,28 +740,64 @@ Current: v3c</Literal>
         <ObjectProperty IRI="#assesses"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCriteria"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDerivationOfUncertainty"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPrimaryEvaluationSubject"/>
+        <ObjectProperty IRI="#hasEvaluationSubject"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasScale"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSecondaryEvaluationSubject"/>
+        <ObjectProperty IRI="#hasEvaluationSubject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCriteriaIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#isEvaluationSubjectOf"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isPrimaryEvaluationSubjectOf"/>
+        <ObjectProperty IRI="#isEvaluationSubjectOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSecondaryEvaluationSubjectOf"/>
+        <ObjectProperty IRI="#isEvaluationSubjectOf"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#assesses"/>
         <ObjectProperty IRI="#isAssessedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCriteria"/>
+        <ObjectProperty IRI="#isCriteriaIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasEvaluationSubject"/>
         <ObjectProperty IRI="#isEvaluationSubjectOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPrimaryEvaluationSubject"/>
+        <ObjectProperty IRI="#isPrimaryEvaluationSubjectOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasScale"/>
         <ObjectProperty IRI="#isScaleOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSecondaryEvaluationSubject"/>
+        <ObjectProperty IRI="#isSecondaryEvaluationSubjectOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasSource"/>
@@ -768,6 +822,10 @@ Current: v3c</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCriteria"/>
+        <Class IRI="#EvaluationProcedure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDerivationOfUncertainty"/>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
     </ObjectPropertyDomain>
@@ -780,8 +838,16 @@ Current: v3c</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPrimaryEvaluationSubject"/>
+        <Class IRI="#EvaluationProcedure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasScale"/>
         <Class IRI="#EvaluationMetric"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSecondaryEvaluationSubject"/>
+        <Class IRI="#EvaluationProcedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSource"/>
@@ -792,12 +858,26 @@ Current: v3c</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCriteriaIn"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isMeasuredBy"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isScaleOf"/>
         <Class IRI="#TypeOfScale"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSecondaryEvaluationSubjectOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#ElementaryFusionProcess"/>
+            <Class IRI="#Information"/>
+            <Class IRI="#SystemProcess"/>
+            <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+            <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isSourceOf"/>
@@ -812,6 +892,10 @@ Current: v3c</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCriteria"/>
+        <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDerivationOfUncertainty"/>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation"/>
     </ObjectPropertyRange>
@@ -820,8 +904,26 @@ Current: v3c</Literal>
         <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPrimaryEvaluationSubject"/>
+        <ObjectUnionOf>
+            <Class IRI="#UncertaintyModel"/>
+            <Class IRI="#UncertaintyReasoning"/>
+            <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasScale"/>
         <Class IRI="#TypeOfScale"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSecondaryEvaluationSubject"/>
+        <ObjectUnionOf>
+            <Class IRI="#ElementaryFusionProcess"/>
+            <Class IRI="#Information"/>
+            <Class IRI="#SystemProcess"/>
+            <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
+            <Class IRI="http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSource"/>
@@ -836,6 +938,10 @@ Current: v3c</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCriteriaIn"/>
+        <Class IRI="#EvaluationProcedure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isEvaluationSubjectOf"/>
         <Class IRI="#EvaluationProcedure"/>
     </ObjectPropertyRange>
@@ -844,8 +950,16 @@ Current: v3c</Literal>
         <Class IRI="#EvaluationMetric"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPrimaryEvaluationSubjectOf"/>
+        <Class IRI="#EvaluationProcedure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isScaleOf"/>
         <Class IRI="#EvaluationMetric"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSecondaryEvaluationSubjectOf"/>
+        <Class IRI="#EvaluationProcedure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isSourceOf"/>
@@ -855,6 +969,14 @@ Current: v3c</Literal>
         <ObjectProperty IRI="#measures"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion"/>
     </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasPrimaryEvaluationSubject"/>
+        <ObjectProperty IRI="#hasSecondaryEvaluationSubject"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#isPrimaryEvaluationSubjectOf"/>
+        <ObjectProperty IRI="#isSecondaryEvaluationSubjectOf"/>
+    </DisjointObjectProperties>
     <SubDataPropertyOf>
         <DataProperty IRI="#TypeOfInformation"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -945,6 +1067,16 @@ Current: v3c</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Inclusiveness</IRI>
         <Literal>Ability to capture and distinguish between different types of uncertainty, among the ones defined by the UncertaintyType class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Information</IRI>
+        <Literal>For evaluation purposes, we assume no distincion between the concepts of data, information, and and knowledge.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Information</IRI>
+        <Literal>For this ontology purposes, an individual of class information is considered as a piece of information</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1149,9 +1281,7 @@ Current: v3c</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence</IRI>
-        <Literal>Evidence, for the purpose of this ontology is considered to be equivalent to:
-- Sentence
-- Information</Literal>
+        <Literal>Evidence, for the purpose of this ontology is considered to be one or more pieces of information used in support to an evaluation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
