@@ -1,0 +1,781 @@
+Prefix(:=<http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl>
+Annotation(rdfs:comment "This is version 3c, currently in the development branch"@en)
+Annotation(owl:versionInfo "v2a: ETURWG GM40
+v2b: ETURWG GM41
+v2c: ETURWG GM49
+v2d: ETURWG GM55
+v3: ETURWG GM83
+v3a: ETURWG GM90
+V3b: ...
+Current: v3c"@en)
+
+Declaration(Class(:Configurality))
+Declaration(Class(:DecisionProcess))
+Declaration(Class(:Dependency))
+Declaration(Class(:ElementaryFusionProcess))
+Declaration(Class(:EpistemicVariable))
+Declaration(Class(:EvaluationMetric))
+Declaration(Class(:EvaluationProcedure))
+Declaration(Class(:FusionSystem))
+Declaration(Class(:FusionSystemComponent))
+Declaration(Class(:HigherOrderUncertainty))
+Declaration(Class(:Inclusiveness))
+Declaration(Class(:Information))
+Declaration(Class(:InformationHandlingCriterion))
+Declaration(Class(:Interval))
+Declaration(Class(:ModelProcess))
+Declaration(Class(:Nominal))
+Declaration(Class(:Ordinal))
+Declaration(Class(:Outcomes))
+Declaration(Class(:RandomVariable))
+Declaration(Class(:Ratio))
+Declaration(Class(:ReasoningProcess))
+Declaration(Class(:Relational))
+Declaration(Class(:SourceProcess))
+Declaration(Class(:SystemProcess))
+Declaration(Class(:TypeOfScale))
+Declaration(Class(:UncertainVariable))
+Declaration(Class(:UncertaintyModel))
+Declaration(Class(:UncertaintyReasoning))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Consistency>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#KnowledgeHandling>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ObservationalSensitivity>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Precision>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Scalability>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#SelfConfidence>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Simplicity>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Timeliness>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Traceability>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Veracity>))
+Declaration(Class(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence>))
+Declaration(Class(<http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence>))
+Declaration(Class(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation>))
+Declaration(Class(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature>))
+Declaration(Class(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory>))
+Declaration(Class(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType>))
+Declaration(ObjectProperty(:IsAssessedOnQualityBy))
+Declaration(ObjectProperty(:ReadSource))
+Declaration(ObjectProperty(:assesses))
+Declaration(ObjectProperty(:assessesQualityOf))
+Declaration(ObjectProperty(:hasDerivationOfUncertainty))
+Declaration(ObjectProperty(:hasEvaluationSubject))
+Declaration(ObjectProperty(:hasImperfection))
+Declaration(ObjectProperty(:hasScale))
+Declaration(ObjectProperty(:hasSource))
+Declaration(ObjectProperty(:hasUncertaintyNature))
+Declaration(ObjectProperty(:isAssessedBy))
+Declaration(ObjectProperty(:isEvaluationSubjectOf))
+Declaration(ObjectProperty(:isMeasuredBy))
+Declaration(ObjectProperty(:isScaleOf))
+Declaration(ObjectProperty(:isSourceOf))
+Declaration(ObjectProperty(:measures))
+Declaration(DataProperty(:HasPieceOfInformation))
+Declaration(DataProperty(:HasUncertanitySupport))
+Declaration(DataProperty(:TypeOfInformation))
+Declaration(DataProperty(:hasCode))
+Declaration(DataProperty(:usesource))
+Declaration(NamedIndividual(:Aleatory))
+Declaration(NamedIndividual(:Ambiguity))
+Declaration(NamedIndividual(:BayesRule))
+Declaration(NamedIndividual(:BayesianCausal_MaritimeUseCase))
+Declaration(NamedIndividual(:BayesianProbabilityTheory))
+Declaration(NamedIndividual(:BeliefFunctionsCausal_MaritimeUseCase))
+Declaration(NamedIndividual(:CredibilityCannotBeJudged))
+Declaration(NamedIndividual(:CredibilityConfirmed))
+Declaration(NamedIndividual(:CredibilityDoubtful))
+Declaration(NamedIndividual(:CredibilityImprobable))
+Declaration(NamedIndividual(:CredibilityPossiblyTrue))
+Declaration(NamedIndividual(:CredibilityProbablyTrue))
+Declaration(NamedIndividual(:DST))
+Declaration(NamedIndividual(:Epistemic))
+Declaration(NamedIndividual(:EvidenceTheory))
+Declaration(NamedIndividual(:F1_Measure))
+Declaration(NamedIndividual(:FuzzySetTheory))
+Declaration(NamedIndividual(:Imprecision))
+Declaration(NamedIndividual(:Incompleteness))
+Declaration(NamedIndividual(:Inconsistency))
+Declaration(NamedIndividual(:None))
+Declaration(NamedIndividual(:Objective))
+Declaration(NamedIndividual(:PossibilityTheory))
+Declaration(NamedIndividual(:R_VesselAType))
+Declaration(NamedIndividual(:R_VesselBType))
+Declaration(NamedIndividual(:Randomness))
+Declaration(NamedIndividual(:RoughSetTheory))
+Declaration(NamedIndividual(:S1_ATRprocessingVideo))
+Declaration(NamedIndividual(:S2_CargoCaptain))
+Declaration(NamedIndividual(:STANAG_Credibility))
+Declaration(NamedIndividual(:STANAG_Reliability))
+Declaration(NamedIndividual(:Subjective))
+Declaration(NamedIndividual(:SubjectiveLogic))
+Declaration(NamedIndividual(:Uncertainity))
+Declaration(NamedIndividual(:Vagueness))
+Declaration(NamedIndividual(:X_MissingVessel))
+Declaration(NamedIndividual(:X_VesselAType))
+Declaration(NamedIndividual(:X_VesselBType))
+Declaration(NamedIndividual(:phi0_MissingVesselEitherAorB))
+Declaration(NamedIndividual(:phi1_MissingVesselFishingVessel))
+Declaration(NamedIndividual(:phi2_IFMissingVesselAThenVesselAFishingVessel))
+Declaration(NamedIndividual(:phi3_IFMissingVesselBThenVesselBFishingVessel))
+Declaration(NamedIndividual(:phi4_IFVesselANotFishingVesselThenMissingVesselB))
+Declaration(NamedIndividual(:phi5_IFVesselBNotFishingVesselThenMissingVesselA))
+Declaration(NamedIndividual(:phi6_75VesselsLeftLandAreFishingVessels))
+Declaration(NamedIndividual(:phi7_60VesselsRightLandFishingVessels))
+Declaration(NamedIndividual(:phiO1_MissingVesselA))
+Declaration(NamedIndividual(:phiO2_MissingVesselB))
+Declaration(NamedIndividual(:phiR1_VesselAFishingVessel))
+Declaration(NamedIndividual(:phiR2_VesselANotFishingVessel))
+Declaration(NamedIndividual(:phiR3_VesselBFishingVessel))
+Declaration(NamedIndividual(:phiR4_VesselBNotFishingVessel))
+Declaration(NamedIndividual(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#BN>))
+Declaration(NamedIndividual(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :IsAssessedOnQualityBy (:IsAssessedOnQualityBy)
+
+SubObjectPropertyOf(:IsAssessedOnQualityBy :isAssessedBy)
+
+# Object Property: :ReadSource (:ReadSource)
+
+ObjectPropertyRange(:ReadSource <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source>)
+
+# Object Property: :assesses (:assesses)
+
+InverseObjectProperties(:assesses :isAssessedBy)
+ObjectPropertyDomain(:assesses <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion>)
+
+# Object Property: :assessesQualityOf (:assessesQualityOf)
+
+SubObjectPropertyOf(:assessesQualityOf :assesses)
+ObjectPropertyDomain(:assessesQualityOf <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality>)
+
+# Object Property: :hasDerivationOfUncertainty (:hasDerivationOfUncertainty)
+
+SubObjectPropertyOf(:hasDerivationOfUncertainty owl:topObjectProperty)
+FunctionalObjectProperty(:hasDerivationOfUncertainty)
+ObjectPropertyDomain(:hasDerivationOfUncertainty <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence>)
+ObjectPropertyRange(:hasDerivationOfUncertainty <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation>)
+
+# Object Property: :hasEvaluationSubject (:hasEvaluationSubject)
+
+InverseObjectProperties(:hasEvaluationSubject :isEvaluationSubjectOf)
+ObjectPropertyDomain(:hasEvaluationSubject :EvaluationProcedure)
+
+# Object Property: :hasImperfection (:hasImperfection)
+
+ObjectPropertyDomain(:hasImperfection :Information)
+ObjectPropertyRange(:hasImperfection <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType>)
+
+# Object Property: :hasScale (:hasScale)
+
+SubObjectPropertyOf(:hasScale owl:topObjectProperty)
+InverseObjectProperties(:hasScale :isScaleOf)
+ObjectPropertyDomain(:hasScale :EvaluationMetric)
+ObjectPropertyRange(:hasScale :TypeOfScale)
+
+# Object Property: :hasSource (:hasSource)
+
+InverseObjectProperties(:hasSource :isSourceOf)
+ObjectPropertyDomain(:hasSource :Information)
+ObjectPropertyDomain(:hasSource <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence>)
+ObjectPropertyRange(:hasSource <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source>)
+
+# Object Property: :hasUncertaintyNature (:hasUncertaintyNature)
+
+FunctionalObjectProperty(:hasUncertaintyNature)
+ObjectPropertyDomain(:hasUncertaintyNature :Information)
+ObjectPropertyDomain(:hasUncertaintyNature <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence>)
+ObjectPropertyRange(:hasUncertaintyNature <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature>)
+
+# Object Property: :isAssessedBy (:isAssessedBy)
+
+ObjectPropertyRange(:isAssessedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion>)
+
+# Object Property: :isEvaluationSubjectOf (:isEvaluationSubjectOf)
+
+SubObjectPropertyOf(:isEvaluationSubjectOf owl:topObjectProperty)
+ObjectPropertyRange(:isEvaluationSubjectOf :EvaluationProcedure)
+
+# Object Property: :isMeasuredBy (:isMeasuredBy)
+
+InverseObjectProperties(:isMeasuredBy :measures)
+ObjectPropertyDomain(:isMeasuredBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion>)
+ObjectPropertyRange(:isMeasuredBy :EvaluationMetric)
+
+# Object Property: :isScaleOf (:isScaleOf)
+
+ObjectPropertyDomain(:isScaleOf :TypeOfScale)
+ObjectPropertyRange(:isScaleOf :EvaluationMetric)
+
+# Object Property: :isSourceOf (:isSourceOf)
+
+ObjectPropertyDomain(:isSourceOf <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source>)
+ObjectPropertyRange(:isSourceOf :Information)
+ObjectPropertyRange(:isSourceOf <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence>)
+
+# Object Property: :measures (:measures)
+
+ObjectPropertyDomain(:measures :EvaluationMetric)
+ObjectPropertyRange(:measures <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :HasPieceOfInformation (:HasPieceOfInformation)
+
+DataPropertyDomain(:HasPieceOfInformation :Information)
+DataPropertyDomain(:HasPieceOfInformation <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence>)
+DataPropertyRange(:HasPieceOfInformation xsd:string)
+
+# Data Property: :HasUncertanitySupport (:HasUncertanitySupport)
+
+DataPropertyDomain(:HasUncertanitySupport <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence>)
+DataPropertyRange(:HasUncertanitySupport xsd:string)
+
+# Data Property: :TypeOfInformation (:TypeOfInformation)
+
+SubDataPropertyOf(:TypeOfInformation owl:topDataProperty)
+DataPropertyDomain(:TypeOfInformation :Information)
+DataPropertyDomain(:TypeOfInformation <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence>)
+DataPropertyRange(:TypeOfInformation xsd:string)
+
+# Data Property: :hasCode (:hasCode)
+
+FunctionalDataProperty(:hasCode)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Configurality (:Configurality)
+
+AnnotationAssertion(rdfs:isDefinedBy :Configurality "Ability of an uncertainty representation to support combining uncertainty about many propositions and/or variables, of different types, with different types of uncertainty.")
+SubClassOf(:Configurality <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness>)
+
+# Class: :DecisionProcess (:DecisionProcess)
+
+SubClassOf(:DecisionProcess :SystemProcess)
+
+# Class: :Dependency (:Dependency)
+
+AnnotationAssertion(rdfs:isDefinedBy :Dependency "Ability of the uncertainty representation to capture dependency among propositions (e.g., cause and effect, relevance, statistical association).")
+SubClassOf(:Dependency <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness>)
+
+# Class: :EpistemicVariable (:EpistemicVariable)
+
+SubClassOf(:EpistemicVariable :UncertainVariable)
+
+# Class: :HigherOrderUncertainty (:HigherOrderUncertainty)
+
+AnnotationAssertion(rdfs:isDefinedBy :HigherOrderUncertainty "Ability of the system to represent uncertainty about the uncertainty model, including parameters, structure, and/or type of  model.")
+SubClassOf(:HigherOrderUncertainty <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness>)
+
+# Class: :Inclusiveness (:Inclusiveness)
+
+AnnotationAssertion(rdfs:comment :Inclusiveness "Ability to capture and distinguish between different types of uncertainty, among the ones defined by the UncertaintyType class.")
+SubClassOf(:Inclusiveness <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness>)
+
+# Class: :InformationHandlingCriterion (:InformationHandlingCriterion)
+
+AnnotationAssertion(rdfs:isDefinedBy :InformationHandlingCriterion "Ability of a Fusion System to manage data.")
+SubClassOf(:InformationHandlingCriterion <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion>)
+
+# Class: :Interval (:Interval)
+
+SubClassOf(:Interval :TypeOfScale)
+
+# Class: :ModelProcess (:ModelProcess)
+
+SubClassOf(:ModelProcess :SystemProcess)
+
+# Class: :Nominal (:Nominal)
+
+SubClassOf(:Nominal :TypeOfScale)
+
+# Class: :Ordinal (:Ordinal)
+
+SubClassOf(:Ordinal :TypeOfScale)
+
+# Class: :Outcomes (:Outcomes)
+
+AnnotationAssertion(rdfs:isDefinedBy :Outcomes "Ability to represent and distinguish between different kinds of outcomes, as defined by the TypeOfScale, for UncertainVariables (e.g., Boolean, qualitative categorical, ordinal, discrete numerical, continuous).")
+SubClassOf(:Outcomes <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness>)
+
+# Class: :RandomVariable (:RandomVariable)
+
+SubClassOf(:RandomVariable :UncertainVariable)
+
+# Class: :Ratio (:Ratio)
+
+SubClassOf(:Ratio :TypeOfScale)
+
+# Class: :ReasoningProcess (:ReasoningProcess)
+
+SubClassOf(:ReasoningProcess :SystemProcess)
+
+# Class: :Relational (:Relational)
+
+AnnotationAssertion(rdfs:isDefinedBy :Relational "Ability to represent uncertainty about domains with relational structure, e.g.,   attribute value uncertainty; reference uncertainty; type uncertainty; existence uncertainty.")
+SubClassOf(:Relational <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness>)
+
+# Class: :SourceProcess (:SourceProcess)
+
+SubClassOf(:SourceProcess :SystemProcess)
+
+# Class: :UncertaintyModel (:UncertaintyModel)
+
+AnnotationAssertion(rdfs:isDefinedBy :UncertaintyModel "A set of functions from an uncertainty theory that map things of a domain to the associated uncertainty about those things.")
+
+# Class: :UncertaintyReasoning (:UncertaintyReasoning)
+
+AnnotationAssertion(rdfs:isDefinedBy :UncertaintyReasoning "Rule or set of rules used to perform uncertainty reasoning to the various elements of an uncertainty model.")
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy> "Closeness of agreement between an evaluation subject value and the true value of the quantity or quality being evaluated.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Accuracy> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability> "Ability of the representational model to allow for different configurations of the model. ")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Adaptability> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment> "Ability of the system to handle the types of uncertainty assessments (e.g., verbal, quantitative, combined) needed for a given problem, and to distinguish them from one another.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Assessment> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility> "degree of which a given knowledge representation is in compliance to data standards. It can also be seen as the flexibility it has of being coded with various standards.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion>)
+DisjointClasses(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Compatibility> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost> "How much of the IF system’s computational resources are required by a given Fusion Algorithm to produce its results.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ComputationalCost> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Consistency> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Consistency>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Consistency> "Ability of the reasoning process to produce the same results when provided with the same data under the same conditions.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Consistency> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness> "Ability to produce correct results. In cases where there is no ground truth to establish a correct answer (including a simulated ground truth), the reasoning process can still be evaluated in terms of how its answers correspond to a gold standard (e.g. SMEs, documentation, etc.)"^^xsd:string)
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Correctness> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility> "Extent to which information can be believed or accepted as true, real, or honest.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion> "Encompasses all the different aspects that must be considered when evaluating uncertainty handling in multi-sensor fusion systems")
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness>)
+
+AnnotationAssertion(owl:priorVersion <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness> "Ability of a knowledge representation formalism to convey all relevant aspects of a given fusion problem.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Expressiveness> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion> "Evaluation Criteria that concern aspects of data and their relationship to source, the object being reported upon, and the objectives of the fusion process.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation> "Ability of a fusion system to support a coherent explanation that can be used to guide assessment, to understand the system's conclusions, and to provide a basis for reasoning and action.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Interpretation> :InformationHandlingCriterion)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#KnowledgeHandling> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#KnowledgeHandling>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#KnowledgeHandling> "Ability of a given uncertainty representation technique to convey knowledge."@en)
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#KnowledgeHandling> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity> "Extent to which information is reported about a matter of fact in an unbiased manner.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Objectivity> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ObservationalSensitivity> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ObservationalSensitivity>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ObservationalSensitivity> "Quotient of the change in a result of evaluation subject  and the corresponding change in a value of a quality being observed.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ObservationalSensitivity> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance> "Ability of the Fusion Algorithm to handle the functional requirements of an information fusion system. Other system architecture factors also affect these criteria.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Precision> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Precision>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Precision> "Closeness of agreement between indications or measured quantity values obtained by replicate measurements on the same or similar evaluation subjects under specified conditions ")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Precision> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality> "Ability to assess the degree of informational quality of the data")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion> "Encompasses criteria directly affecting how an information fusion system transforms its input data into knowledge. It can also be called as process or inference criteria, as it deals with how the uncertainty model performs operations with information.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem> "Degree of which an evaluation subject has direct bearing on the objectives of the fusion process.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion> "Encompasses criteria related to how uncertainty is characterized, captured and stored in a manner that can be processed by the fusion system. ")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#EvaluationCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Scalability> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Scalability>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Scalability> "Ability to handle a growing amount of work in a capable manner or its ability to be enlarged to accommodate that growth.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Scalability> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#SelfConfidence> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#SelfConfidence>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#SelfConfidence> "Sensor's assessment of its own credibility. This is mostly applicabe to human reports.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#SelfConfidence> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Simplicity> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Simplicity>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Simplicity> "Assesses the information system's ability to execute common operations without requiring deep knowledge about its inner details. ")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Simplicity> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source>)
+
+AnnotationAssertion(rdfs:comment <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source> "A source is the origin of the information."@en)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput> "Average (and possibly peak) rate of conversion of inputs to outputs.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Throughput> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Timeliness> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Timeliness>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Timeliness> "Ability to produce results within a required timeframe.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Timeliness> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Performance>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Traceability> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Traceability>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Traceability> "Ability of a fusion system to provide an accurate and unbroken historical record of its inputs and the chain of operations that led to its conclusions.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Traceability> :InformationHandlingCriterion)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Veracity> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Veracity>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Veracity> "Extent to which a source reports what it assesses to be the case.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Veracity> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Quality>)
+
+# Class: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence> "Degree of impact of an evaluation subject on the result of fusion.")
+SubClassOf(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion>)
+
+# Class: <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence> (<http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence>)
+
+AnnotationAssertion(rdfs:comment <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence> "An expression in some logical language that evaluates to a truth-value (formula, axiom, assertion). It is then assumed that information will be presented in the form of sentences. So the uncertainty will be associated with sentences."@en)
+AnnotationAssertion(rdfs:comment <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence> "Evidence, for the purpose of this ontology is considered to be equivalent to:
+- Sentence
+- Information")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.owl-ontologies.com/Ontology1181490123.owl#Evidence> "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/Uncertainty.owl"^^xsd:anyURI)
+
+# Class: <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation> (<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation>)
+
+AnnotationAssertion(rdfs:comment <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation> "Uncertainty derivation refers to the way it can be assessed. That is, how the uncertainty metrics can be derived."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation> "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology"^^xsd:anyURI)
+
+# Class: <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature> (<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature>)
+
+AnnotationAssertion(rdfs:comment <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature> "This captures the information about the nature of the uncertainty, i.e., whether the uncertainty is inherent in the phenomenon expressed by the sentence, or it is the result of lack of knowledge of the agent."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature> "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology"^^xsd:anyURI)
+
+# Class: <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory> (<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory> "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology"^^xsd:anyURI)
+
+# Class: <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> (<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType>)
+
+AnnotationAssertion(rdfs:comment <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> "For the purposes of this ontology, Uncertainty type is equivalent to:
+- type of imperfection")
+AnnotationAssertion(rdfs:comment <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> "Uncertainty Type is a concept that focuses on underlying characteristics of the information that make it uncertain. "@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology"^^xsd:anyURI)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Aleatory (:Aleatory)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature> :Aleatory)
+
+# Individual: :Ambiguity (:Ambiguity)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> :Ambiguity)
+
+# Individual: :BayesRule (:BayesRule)
+
+AnnotationAssertion(rdfs:comment :BayesRule "Is a evaluation technique in maritime usecase"@en)
+DataPropertyAssertion(:usesource :BayesRule "")
+
+# Individual: :BayesianCausal_MaritimeUseCase (:BayesianCausal_MaritimeUseCase)
+
+ClassAssertion(:UncertaintyModel :BayesianCausal_MaritimeUseCase)
+
+# Individual: :BayesianProbabilityTheory (:BayesianProbabilityTheory)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory> :BayesianProbabilityTheory)
+
+# Individual: :BeliefFunctionsCausal_MaritimeUseCase (:BeliefFunctionsCausal_MaritimeUseCase)
+
+ClassAssertion(:UncertaintyModel :BeliefFunctionsCausal_MaritimeUseCase)
+
+# Individual: :CredibilityCannotBeJudged (:CredibilityCannotBeJudged)
+
+AnnotationAssertion(rdfs:comment :CredibilityCannotBeJudged "If its truth cannot be judged"@en)
+DataPropertyAssertion(:hasCode :CredibilityCannotBeJudged "6"^^xsd:int)
+
+# Individual: :CredibilityConfirmed (:CredibilityConfirmed)
+
+AnnotationAssertion(rdfs:comment :CredibilityConfirmed "If it can be stated with certainty that the reported information originates from another source than the already existing information on the same object"@en)
+DataPropertyAssertion(:hasCode :CredibilityConfirmed "1"^^xsd:int)
+
+# Individual: :CredibilityDoubtful (:CredibilityDoubtful)
+
+AnnotationAssertion(rdfs:comment :CredibilityDoubtful "An item of information which tends to conflict with the previously reported or establish behavior pattern of an intelligence target"@en)
+DataPropertyAssertion(:hasCode :CredibilityDoubtful "4"^^xsd:int)
+
+# Individual: :CredibilityImprobable (:CredibilityImprobable)
+
+AnnotationAssertion(rdfs:comment :CredibilityImprobable "An item of information which positively contradicts previously reported information of conflicts with the established behavior pattern of an intelligence target in a marked degree"@en)
+DataPropertyAssertion(:hasCode :CredibilityImprobable "5"^^xsd:int)
+
+# Individual: :CredibilityPossiblyTrue (:CredibilityPossiblyTrue)
+
+AnnotationAssertion(rdfs:comment :CredibilityPossiblyTrue "If insufficient confirmation to establish any higher degree of likelihood, a freshly reported item of information does not conflict with the previously reported target behavior"@en)
+DataPropertyAssertion(:hasCode :CredibilityPossiblyTrue "3"^^xsd:int)
+
+# Individual: :CredibilityProbablyTrue (:CredibilityProbablyTrue)
+
+AnnotationAssertion(rdfs:comment :CredibilityProbablyTrue "If the independence of the source cannot be guaranteed, but if, from the quantity and quality of previous reports, its likelihood is nevertheless regarded as sufficiently established"@en)
+DataPropertyAssertion(:hasCode :CredibilityProbablyTrue "2"^^xsd:int)
+
+# Individual: :DST (:DST)
+
+DataPropertyAssertion(:usesource :DST "")
+
+# Individual: :Epistemic (:Epistemic)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyNature> :Epistemic)
+
+# Individual: :EvidenceTheory (:EvidenceTheory)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory> :EvidenceTheory)
+
+# Individual: :F1_Measure (:F1_Measure)
+
+ClassAssertion(:EvaluationMetric :F1_Measure)
+
+# Individual: :FuzzySetTheory (:FuzzySetTheory)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory> :FuzzySetTheory)
+
+# Individual: :Imprecision (:Imprecision)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> :Imprecision)
+
+# Individual: :Incompleteness (:Incompleteness)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> :Incompleteness)
+
+# Individual: :Inconsistency (:Inconsistency)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> :Inconsistency)
+
+# Individual: :None (:None)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> :None)
+
+# Individual: :Objective (:Objective)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation> :Objective)
+
+# Individual: :PossibilityTheory (:PossibilityTheory)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory> :PossibilityTheory)
+
+# Individual: :R_VesselAType (:R_VesselAType)
+
+ClassAssertion(:UncertainVariable :R_VesselAType)
+
+# Individual: :R_VesselBType (:R_VesselBType)
+
+ClassAssertion(:UncertainVariable :R_VesselBType)
+
+# Individual: :Randomness (:Randomness)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> :Randomness)
+
+# Individual: :RoughSetTheory (:RoughSetTheory)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory> :RoughSetTheory)
+
+# Individual: :S1_ATRprocessingVideo (:S1_ATRprocessingVideo)
+
+ClassAssertion(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source> :S1_ATRprocessingVideo)
+DataPropertyAssertion(:HasPieceOfInformation :S1_ATRprocessingVideo "")
+
+# Individual: :S2_CargoCaptain (:S2_CargoCaptain)
+
+ClassAssertion(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source> :S2_CargoCaptain)
+
+# Individual: :STANAG_Credibility (:STANAG_Credibility)
+
+ClassAssertion(:EvaluationMetric :STANAG_Credibility)
+
+# Individual: :STANAG_Reliability (:STANAG_Reliability)
+
+ClassAssertion(:EvaluationMetric :STANAG_Reliability)
+
+# Individual: :Subjective (:Subjective)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyDerivation> :Subjective)
+
+# Individual: :SubjectiveLogic (:SubjectiveLogic)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyTheory> :SubjectiveLogic)
+
+# Individual: :Uncertainity (:Uncertainity)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> :Uncertainity)
+
+# Individual: :Vagueness (:Vagueness)
+
+ClassAssertion(<http://www.owl-ontologies.com/Ontology1181490123.owl#UncertaintyType> :Vagueness)
+
+# Individual: :X_MissingVessel (:X_MissingVessel)
+
+ClassAssertion(:UncertainVariable :X_MissingVessel)
+
+# Individual: :X_VesselAType (:X_VesselAType)
+
+ClassAssertion(:UncertainVariable :X_VesselAType)
+
+# Individual: :X_VesselBType (:X_VesselBType)
+
+ClassAssertion(:UncertainVariable :X_VesselBType)
+
+# Individual: :phi0_MissingVesselEitherAorB (:phi0_MissingVesselEitherAorB)
+
+ClassAssertion(:Information :phi0_MissingVesselEitherAorB)
+
+# Individual: :phi1_MissingVesselFishingVessel (:phi1_MissingVesselFishingVessel)
+
+ClassAssertion(:Information :phi1_MissingVesselFishingVessel)
+ObjectPropertyAssertion(:hasImperfection :phi1_MissingVesselFishingVessel :Imprecision)
+
+# Individual: :phi2_IFMissingVesselAThenVesselAFishingVessel (:phi2_IFMissingVesselAThenVesselAFishingVessel)
+
+ClassAssertion(:Information :phi2_IFMissingVesselAThenVesselAFishingVessel)
+
+# Individual: :phi3_IFMissingVesselBThenVesselBFishingVessel (:phi3_IFMissingVesselBThenVesselBFishingVessel)
+
+ClassAssertion(:Information :phi3_IFMissingVesselBThenVesselBFishingVessel)
+
+# Individual: :phi4_IFVesselANotFishingVesselThenMissingVesselB (:phi4_IFVesselANotFishingVesselThenMissingVesselB)
+
+ClassAssertion(:Information :phi4_IFVesselANotFishingVesselThenMissingVesselB)
+
+# Individual: :phi5_IFVesselBNotFishingVesselThenMissingVesselA (:phi5_IFVesselBNotFishingVesselThenMissingVesselA)
+
+ClassAssertion(:Information :phi5_IFVesselBNotFishingVesselThenMissingVesselA)
+
+# Individual: :phi6_75VesselsLeftLandAreFishingVessels (:phi6_75VesselsLeftLandAreFishingVessels)
+
+ClassAssertion(:Information :phi6_75VesselsLeftLandAreFishingVessels)
+
+# Individual: :phi7_60VesselsRightLandFishingVessels (:phi7_60VesselsRightLandFishingVessels)
+
+ClassAssertion(:Information :phi7_60VesselsRightLandFishingVessels)
+
+# Individual: :phiO1_MissingVesselA (:phiO1_MissingVesselA)
+
+ClassAssertion(:Information :phiO1_MissingVesselA)
+
+# Individual: :phiO2_MissingVesselB (:phiO2_MissingVesselB)
+
+ClassAssertion(:Information :phiO2_MissingVesselB)
+
+# Individual: :phiR1_VesselAFishingVessel (:phiR1_VesselAFishingVessel)
+
+ClassAssertion(:Information :phiR1_VesselAFishingVessel)
+ObjectPropertyAssertion(:hasSource :phiR1_VesselAFishingVessel :S1_ATRprocessingVideo)
+
+# Individual: :phiR2_VesselANotFishingVessel (:phiR2_VesselANotFishingVessel)
+
+ClassAssertion(:Information :phiR2_VesselANotFishingVessel)
+
+# Individual: :phiR3_VesselBFishingVessel (:phiR3_VesselBFishingVessel)
+
+ClassAssertion(:Information :phiR3_VesselBFishingVessel)
+
+# Individual: :phiR4_VesselBNotFishingVessel (:phiR4_VesselBNotFishingVessel)
+
+ClassAssertion(:Information :phiR4_VesselBNotFishingVessel)
+
+# Individual: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#BN> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#BN>)
+
+AnnotationAssertion(rdfs:comment <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#BN> "Bayesian Networks"@en)
+AnnotationAssertion(rdfs:comment <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#BN> "Bayesian networks are a powerful graphical language for representing probabilistic relationships among large numbers of uncertain hypotheses. They have been applied to a wide variety of problems including medical diagnosis, classification systems, multi-sensor fusion, and legal analysis for trials."@en)
+
+# Individual: <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN> (<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN>)
+
+AnnotationAssertion(rdfs:comment <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#MEBN> "Multi-Entity Bayesian Networks"@en)
+
+
+DisjointClasses(:DecisionProcess :ModelProcess :ReasoningProcess :SourceProcess)
+DisjointClasses(:InformationHandlingCriterion <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#InformationCriterion> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion>)
+DisjointClasses(<http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RelevanceToProblem> <http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#WeightOfEvidence>)
+DifferentIndividuals(:Ambiguity :Incompleteness :Inconsistency :Randomness :Vagueness)
+)
