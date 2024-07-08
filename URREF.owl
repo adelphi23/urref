@@ -103,6 +103,9 @@ Development: v5.0.0</Literal>
         <Class IRI="#InformationHandlingCriterion"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#InformationHandlingMethod"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Integrity"/>
     </Declaration>
     <Declaration>
@@ -370,7 +373,22 @@ Development: v5.0.0</Literal>
         <ObjectProperty IRI="#ReadSource"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#appliesTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#appliesToHandling"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#appliesToReasoning"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#appliesToRepresentation"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#assesses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#basedOn"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#employs"/>
@@ -749,6 +767,18 @@ Development: v5.0.0</Literal>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#appliesToHandling"/>
+        <ObjectProperty IRI="#appliesTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#appliesToReasoning"/>
+        <ObjectProperty IRI="#appliesTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#appliesToRepresentation"/>
+        <ObjectProperty IRI="#appliesTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#measures"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -834,8 +864,57 @@ Development: v5.0.0</Literal>
         <Class IRI="#DataProcessingTechnique"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#appliesTo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#appliesTo"/>
+            <Class IRI="#UncertaintyRepresentation"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#appliesToHandling"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#appliesToHandling"/>
+            <Class IRI="#InformationHandlingMethod"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#appliesToReasoning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#appliesToReasoning"/>
+            <Class IRI="#UncertaintyReasoning"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#appliesToRepresentation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#appliesTo"/>
+            <Class IRI="#UncertaintyRepresentation"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#assesses"/>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Credibility"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#basedOn"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#basedOn"/>
+            <Class IRI="#InformationHandlingMethod"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#basedOn"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#basedOn"/>
+            <Class IRI="#UncertaintyReasoning"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#basedOn"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#basedOn"/>
+            <Class IRI="#UncertaintyRepresentation"/>
+        </ObjectSomeValuesFrom>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#employs"/>
@@ -930,8 +1009,43 @@ Development: v5.0.0</Literal>
         <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#Source"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#appliesTo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#appliesTo"/>
+            <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#appliesToHandling"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#appliesToHandling"/>
+            <Class IRI="#InformationHandlingCriterion"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#appliesToReasoning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#appliesToReasoning"/>
+            <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#ReasoningCriterion"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#appliesToRepresentation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#appliesTo"/>
+            <Class IRI="http://eturwg.c4i.gmu.edu/ontologies/URREF.owl#RepresentationCriterion"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#assesses"/>
         <Class IRI="#DataInput"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#basedOn"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#basedOn"/>
+            <Class IRI="#FusionMethod"/>
+        </ObjectSomeValuesFrom>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#employs"/>
@@ -1165,6 +1279,16 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#InformationHandlingMethod</IRI>
+        <Literal>TODO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>#InformationHandlingMethod</IRI>
+        <Literal>5.0.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#Integrity</IRI>
         <Literal>TODO</Literal>
     </AnnotationAssertion>
@@ -1386,6 +1510,56 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#UncertaintySupport</IRI>
         <Literal>TODO: what you are certain about.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#appliesTo</IRI>
+        <Literal>TODO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>#appliesTo</IRI>
+        <Literal>5.0.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#appliesToHandling</IRI>
+        <Literal>TODO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>#appliesToHandling</IRI>
+        <Literal>5.0.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#appliesToReasoning</IRI>
+        <Literal>TODO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>#appliesToReasoning</IRI>
+        <Literal>5.0.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#appliesToRepresentation</IRI>
+        <Literal>TODO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>#appliesToRepresentation</IRI>
+        <Literal>5.0.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#basedOn</IRI>
+        <Literal>TODO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>#basedOn</IRI>
+        <Literal>5.0.0</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
