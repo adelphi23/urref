@@ -105,14 +105,8 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesTo
 :appliesTo rdf:type owl:ObjectProperty ;
-           rdfs:domain [ rdf:type owl:Restriction ;
-                         owl:onProperty :appliesTo ;
-                         owl:someValuesFrom :UncertaintyRepresentation
-                       ] ;
-           rdfs:range [ rdf:type owl:Restriction ;
-                        owl:onProperty :appliesTo ;
-                        owl:someValuesFrom :RepresentationCriterion
-                      ] ;
+           rdfs:domain :UncertaintyRepresentation ;
+           rdfs:range :RepresentationCriterion ;
            rdfs:isDefinedBy "TODO" ;
            owl:versionInfo "4.0.0" .
 
@@ -120,14 +114,8 @@ v4.0.0: ETURWG""" ;
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesToHandling
 :appliesToHandling rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :appliesTo ;
-                   rdfs:domain [ rdf:type owl:Restriction ;
-                                 owl:onProperty :appliesToHandling ;
-                                 owl:someValuesFrom :InformationHandlingMethod
-                               ] ;
-                   rdfs:range [ rdf:type owl:Restriction ;
-                                owl:onProperty :appliesToHandling ;
-                                owl:someValuesFrom :InformationHandlingCriterion
-                              ] ;
+                   rdfs:domain :InformationHandlingMethod ;
+                   rdfs:range :InformationHandlingCriterion ;
                    rdfs:isDefinedBy "TODO" ;
                    owl:versionInfo "4.0.0" .
 
@@ -135,14 +123,8 @@ v4.0.0: ETURWG""" ;
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesToReasoning
 :appliesToReasoning rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :appliesTo ;
-                    rdfs:domain [ rdf:type owl:Restriction ;
-                                  owl:onProperty :appliesToReasoning ;
-                                  owl:someValuesFrom :UncertaintyReasoning
-                                ] ;
-                    rdfs:range [ rdf:type owl:Restriction ;
-                                 owl:onProperty :appliesToReasoning ;
-                                 owl:someValuesFrom :ReasoningCriterion
-                               ] ;
+                    rdfs:domain :UncertaintyReasoning ;
+                    rdfs:range :ReasoningCriterion ;
                     rdfs:isDefinedBy "TODO" ;
                     owl:versionInfo "4.0.0" .
 
@@ -150,14 +132,8 @@ v4.0.0: ETURWG""" ;
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesToRepresentation
 :appliesToRepresentation rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf :appliesTo ;
-                         rdfs:domain [ rdf:type owl:Restriction ;
-                                       owl:onProperty :appliesTo ;
-                                       owl:someValuesFrom :UncertaintyRepresentation
-                                     ] ;
-                         rdfs:range [ rdf:type owl:Restriction ;
-                                      owl:onProperty :appliesTo ;
-                                      owl:someValuesFrom :RepresentationCriterion
-                                    ] ;
+                         rdfs:domain :UncertaintyRepresentation ;
+                         rdfs:range :RepresentationCriterion ;
                          rdfs:isDefinedBy "TODO" ;
                          owl:versionInfo "4.0.0" .
 
@@ -171,36 +147,18 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#basedOn
 :basedOn rdf:type owl:ObjectProperty ;
-         rdfs:domain [ rdf:type owl:Restriction ;
-                       owl:onProperty :basedOn ;
-                       owl:someValuesFrom :InformationHandlingMethod
-                     ] ,
-                     [ rdf:type owl:Restriction ;
-                       owl:onProperty :basedOn ;
-                       owl:someValuesFrom :UncertaintyReasoning
-                     ] ,
-                     [ rdf:type owl:Restriction ;
-                       owl:onProperty :basedOn ;
-                       owl:someValuesFrom :UncertaintyRepresentation
-                     ] ;
-         rdfs:range [ rdf:type owl:Restriction ;
-                      owl:onProperty :basedOn ;
-                      owl:someValuesFrom :FusionMethod
-                    ] ;
+         rdfs:domain :InformationHandlingMethod,
+                     :UncertaintyReasoning,
+                     :UncertaintyRepresentation ;
+         rdfs:range :FusionMethod ;
          rdfs:isDefinedBy "TODO" ;
          owl:versionInfo "4.0.0" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#employs
 :employs rdf:type owl:ObjectProperty ;
-         rdfs:domain [ rdf:type owl:Restriction ;
-                       owl:onProperty :employs ;
-                       owl:someValuesFrom :EvaluationMeasure
-                     ] ;
-         rdfs:range [ rdf:type owl:Restriction ;
-                      owl:onProperty :employs ;
-                      owl:someValuesFrom :EvaluationProcess
-                    ] ;
+         rdfs:domain :EvaluationMeasure ;
+         rdfs:range :EvaluationProcess ;
          rdfs:isDefinedBy "TODO" ;
          owl:versionInfo "4.0.0" .
 
@@ -213,18 +171,9 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#impacts
 :impacts rdf:type owl:ObjectProperty ;
-         rdfs:domain [ rdf:type owl:Restriction ;
-                       owl:onProperty :impacts ;
-                       owl:someValuesFrom :InformationCriterion
-                     ] ,
-                     [ rdf:type owl:Restriction ;
-                       owl:onProperty :impacts ;
-                       owl:someValuesFrom :SourceCriterion
-                     ] ;
-         rdfs:range [ rdf:type owl:Restriction ;
-                      owl:onProperty :impacts ;
-                      owl:someValuesFrom :WeightOfInformation
-                    ] ;
+         rdfs:domain :InformationCriterion,
+                     :SourceCriterion ;
+         rdfs:range :WeightOfInformation ;
          rdfs:comment "TODO: decide whether associations are pascalCase or CamelCase."@en ;
          owl:versionInfo "4.0.0" .
 
@@ -238,14 +187,8 @@ v4.0.0: ETURWG""" ;
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#measures
 :measures rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
-          rdfs:domain [ rdf:type owl:Restriction ;
-                        owl:onProperty :measures ;
-                        owl:someValuesFrom :EvaluationMeasure
-                      ] ;
-          rdfs:range [ rdf:type owl:Restriction ;
-                       owl:onProperty :measures ;
-                       owl:someValuesFrom :EvaluationCriterion
-                     ] ;
+          rdfs:domain :EvaluationMeasure ;
+          rdfs:range :EvaluationCriterion ;
           rdfs:isDefinedBy "TODO" ;
           owl:versionInfo "4.0.0" .
 
