@@ -4,21 +4,21 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl> .
 
+# TODO: license
 <http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl> rdf:type owl:Ontology ;
-                                                        owl:versionIRI <http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl> ;
-                                                        owl:priorVersion "v3c"@en ;
-                                                        owl:versionInfo """v2a: ETURWG GM40
+    rdfs:label "URREF" ;
+    owl:versionIRI <http://eturwg.c4i.gmu.edu/files/ontologies/URREF_4.0.1.owl> ;
+    owl:versionInfo "v4.0.1" ;
+    owl:priorVersion "v4.0.0" ;
+    rdfs:comment """v2a: ETURWG GM40
 v2b: ETURWG GM41
 v2c: ETURWG GM49
 v2d: ETURWG GM55
 v3: ETURWG GM83
 v3a: ETURWG GM90
-V3b: ETURWG GM102 F18 F2F
-Current: v3c
-Development: v4.0.0"""@en ,
-                                                                        "v4.0.0"@en .
+v3b: ETURWG GM102 F18 F2F
+v4.0.0: ETURWG""" .
 
 #################################################################
 #    Object Properties
