@@ -34,11 +34,13 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#GivesDataInputTo
 :GivesDataInputTo rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain :Source .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasEvaluationSubject
 :HasEvaluationSubject rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
                       owl:inverseOf :IsSubjectOfEvaluationIn ;
                       rdfs:domain :EvaluationProcess ;
                       rdfs:range :FusionSystem ,
@@ -49,12 +51,14 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasImperfection
 :HasImperfection rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :Evidence ;
                  rdfs:range :UncertaintyType .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasSource
 :HasSource rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:domain :DataInput ,
                        :Evidence ;
            rdfs:range :Source .
@@ -63,6 +67,7 @@ v4.0.0: ETURWG""" ;
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasUncertaintySupport
 :HasUncertaintySupport rdf:type owl:ObjectProperty ,
                                 owl:FunctionalProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
                        rdfs:domain :Evidence ;
                        rdfs:range :UncertaintySupport .
 
@@ -80,12 +85,14 @@ v4.0.0: ETURWG""" ;
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#NatureOfUncertainty
 :NatureOfUncertainty rdf:type owl:ObjectProperty ,
                               owl:FunctionalProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain :Evidence ;
                      rdfs:range :UncertaintyNature .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#OuputAssessedBy
 :OuputAssessedBy rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
                  owl:inverseOf :QualityAssesses ;
                  rdfs:domain :DataOutput ;
                  rdfs:range :Quality .
@@ -93,18 +100,21 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#QualityAssesses
 :QualityAssesses rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :Quality ;
                  rdfs:range :DataOutput .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#ReadSource
 :ReadSource rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :DataProcessingTechnique ;
             rdfs:range :Source .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesTo
 :appliesTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:domain :UncertaintyRepresentation ;
            rdfs:range :RepresentationCriterion ;
            rdfs:isDefinedBy "TODO" ;
@@ -140,6 +150,7 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#assesses
 :assesses rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
           owl:inverseOf :isAssessedBy ;
           rdfs:domain :Credibility ;
           rdfs:range :DataInput .
@@ -147,6 +158,7 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#basedOn
 :basedOn rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :InformationHandlingMethod,
                      :UncertaintyReasoning,
                      :UncertaintyRepresentation ;
@@ -157,6 +169,7 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#employs
 :employs rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :EvaluationMeasure ;
          rdfs:range :EvaluationProcess ;
          rdfs:isDefinedBy "TODO" ;
@@ -165,12 +178,14 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasInformation
 :hasInformation rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain :DataInput ,
                             :Source .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#impacts
 :impacts rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :InformationCriterion,
                      :SourceCriterion ;
          rdfs:range :WeightOfInformation ;
@@ -180,6 +195,7 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#isAssessedBy
 :isAssessedBy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :DataInput ;
               rdfs:range :Credibility .
 
@@ -199,12 +215,14 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasPieceOfInformation
 :HasPieceOfInformation rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:domain :Evidence ;
                        rdfs:range xsd:string .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasUncertanitySupport
 :HasUncertanitySupport rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:domain :Evidence ;
                        rdfs:range xsd:string .
 
@@ -218,11 +236,13 @@ v4.0.0: ETURWG""" ;
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasCode
 :hasCode rdf:type owl:DatatypeProperty ,
-                  owl:FunctionalProperty .
+                  owl:FunctionalProperty ;
+         rdfs:subPropertyOf owl:topDataProperty .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#usesource
-:usesource rdf:type owl:DatatypeProperty .
+:usesource rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
 
 
 #################################################################
