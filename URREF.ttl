@@ -381,11 +381,13 @@ Ability of an uncertainty representation to support combining uncertainty about 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#EvaluationCriterion
 :EvaluationCriterion a owl:Class ;
+                     rdfs:subClassOf owl:Thing ;
                      rdfs:isDefinedBy "Encompasses all the different aspects that must be considered when evaluating uncertainty handling in multi-sensor fusion systems" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#EvaluationMeasure
 :EvaluationMeasure a owl:Class ;
+                   rdfs:subClassOf owl:Thing ;
                    rdfs:comment "Examples covers: STANAG2511Credibility, STANAG2511Reliability, Shanon entropy..." ,
                                 "TODO: what about quantitative versus qualitiative?" ;
                    rdfs:isDefinedBy "TODO" ;
@@ -394,6 +396,7 @@ Ability of an uncertainty representation to support combining uncertainty about 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#EvaluationProcess
 :EvaluationProcess a owl:Class ;
+                   rdfs:subClassOf owl:Thing ;
                    rdfs:comment """Entities of the Evaluation class are actual evaluations. 
 According to Patton, Evaluation is a process that critically examines a program. It involves collecting and analyzing information about a program's activities, characteristics, and outcomes. Its purpose is to make judgments about a program, to improve its effectiveness, and/or to inform programming decisions. 
 Patton, M.Q. (1987). Qualitative Research Evaluation Methods. Thousand Oaks, CA: Sage Publishers.)."""@en .
@@ -401,11 +404,13 @@ Patton, M.Q. (1987). Qualitative Research Evaluation Methods. Thousand Oaks, CA:
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#EvaluationSubject
 :EvaluationSubject a owl:Class ;
+                   rdfs:subClassOf owl:Thing ;
                    rdfs:comment "An Evaluation Subject is an item which can be assessed according to the criteria defined in the URREF ontology."@en .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Evidence
 :Evidence a owl:Class ;
+          rdfs:subClassOf owl:Thing ;
           rdfs:comment "An expression in some logical language that evaluates to a truth-value (formula, axiom, assertion). It is then assumed that information will be presented in the form of sentences. So the uncertainty will be associated with sentences."@en ,
                        """Evidence, for the purpose of this ontology is considered to be equivalent to:
 - Sentence
@@ -430,22 +435,26 @@ Patton, M.Q. (1987). Qualitative Research Evaluation Methods. Thousand Oaks, CA:
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#FusionMethod
 :FusionMethod a owl:Class ;
+             rdfs:subClassOf owl:Thing ;
               rdfs:isDefinedBy "TODO" ;
               owl:versionInfo "4.0.0" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#FusionSystem
-:FusionSystem a owl:Class .
+:FusionSystem a owl:Class ;
+              rdfs:subClassOf owl:Thing .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#FusionSystemComponent
 :FusionSystemComponent a owl:Class ;
+                       rdfs:subClassOf owl:Thing ;
                        owl:deprecated "true"^^xsd:boolean ;
                        owl:versionInfo "4.0.0" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#FusionSystemProcess
 :FusionSystemProcess a owl:Class ;
+                     rdfs:subClassOf owl:Thing ;
                      owl:deprecated "true"^^xsd:boolean ;
                      owl:versionInfo "4.0.0" .
 
@@ -482,8 +491,8 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Information
-:Information a owl:Class .
-
+:Information a owl:Class ;
+             rdfs:subClassOf owl:Thing .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#InformationCriterion
 :InformationCriterion a owl:Class ;
@@ -524,6 +533,7 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Interpretation
 :Interpretation a owl:Class ;
+                rdfs:subClassOf owl:Thing ;
                 owl:deprecated "true"^^xsd:boolean ;
                 owl:versionInfo "4.0.0" .
 
@@ -751,6 +761,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Source
 :Source a owl:Class ;
+        rdfs:subClassOf owl:Thing ;
         rdfs:comment "A source is the origin of the information."@en .
 
 
@@ -809,12 +820,14 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Trust
 :Trust a owl:Class ;
+       rdfs:subClassOf owl:Thing ;
        rdfs:isDefinedBy "TODO: placeholder to import trust ontologies" ;
        owl:versionInfo "4.0.0" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#TypeOfScale
-:TypeOfScale a owl:Class .
+:TypeOfScale a owl:Class ;
+             rdfs:subClassOf owl:Thing .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertainEvidence
@@ -827,12 +840,14 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyDerivation
 :UncertaintyDerivation a owl:Class ;
+                       rdfs:subClassOf owl:Thing ;
                        rdfs:comment "Uncertainty derivation refers to the way it can be assessed. That is, how the uncertainty metrics can be derived."@en ;
                        rdfs:isDefinedBy "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology"^^xsd:anyURI .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyModel
 :UncertaintyModel a owl:Class ;
+                  rdfs:subClassOf owl:Thing ;
                   rdfs:comment "Renamed from \"UncertaintyFunction\" in version 4.0.0." ;
                   rdfs:isDefinedBy """TODO:
 - a probability function
@@ -842,32 +857,38 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyNature
 :UncertaintyNature a owl:Class ;
+                   rdfs:subClassOf owl:Thing ;
                    rdfs:comment "This captures the information about the nature of the uncertainty, i.e., whether the uncertainty is inherent in the phenomenon expressed by the sentence, or it is the result of lack of knowledge of the agent."@en ;
                    rdfs:isDefinedBy "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology"^^xsd:anyURI .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyReasoning
 :UncertaintyReasoning a owl:Class ;
+                      rdfs:subClassOf owl:Thing ;
                       rdfs:isDefinedBy "TODO" ;
                       owl:versionInfo "4.0.0" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyRepresentation
-:UncertaintyRepresentation a owl:Class .
+:UncertaintyRepresentation a owl:Class ;
+                           rdfs:subClassOf owl:Thing .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintySupport
 :UncertaintySupport a owl:Class ;
+                    rdfs:subClassOf owl:Thing ;
                     rdfs:isDefinedBy "TODO: what you are certain about." .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyTheory
 :UncertaintyTheory a owl:Class ;
+                   rdfs:subClassOf owl:Thing ;
                    rdfs:isDefinedBy "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology"^^xsd:anyURI .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyType
 :UncertaintyType a owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
                  rdfs:comment "Uncertainty Type is a concept that focuses on underlying characteristics of the information that make it uncertain. "@en ,
                               """For the purposes of this ontology, Uncertainty type is equivalent to:
 - type of imperfection""" ;
@@ -876,6 +897,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UnreliableEvidence
 :UnreliableEvidence a owl:Class ;
+                    rdfs:subClassOf owl:Thing ;
                     rdfs:subClassOf :UncertainEvidence .
 
 
