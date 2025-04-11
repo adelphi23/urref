@@ -4,9 +4,13 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @base <http://eturwg.c4i.gmu.edu/files/ontologies/URREF#> .
 
 <http://eturwg.c4i.gmu.edu/files/ontologies/URREF> a owl:Ontology ;
+                                                    dcterms:modified "2024-04-11" ;
+                                                    owl:priorVersion "v4.0.0" ;
+                                                    owl:versionInfo "v4.0.1" ;
                                                     owl:versionIRI <http://eturwg.c4i.gmu.edu/files/ontologies/URREF/4.0.1/URREF> ;
                                                     rdfs:comment """v2a: ETURWG GM40
 v2b: ETURWG GM41
@@ -17,8 +21,37 @@ v3a: ETURWG GM90
 v3b: ETURWG GM102 F18 F2F
 v4.0.0: ETURWG""" ;
                                                     rdfs:label "URREF" ;
-                                                    owl:priorVersion "v4.0.0" ;
-                                                    owl:versionInfo "v4.0.1" .
+                                                    dcterms:title "Uncertainty Representation and Reasoning Evaluation Framework's Ontology" ;
+                                                    dcterms:description "A taxonomy for modeling uncertain information." ;
+                                                    dcterms:abstract """Current advances in technology, sensor collection, data
+storage, and data distribution have afforded more complex,
+distributed, and operational information fusion systems (IFSs). IFSs
+notionally consist of low-level (data collection, registration, and
+association in time and space) and high-level information fusion
+(user coordination, situational awareness, and mission control),
+which require a common ontology for effective communication and
+data processing. This ontology reference
+model is developed as part of the uncertainty representation and
+reasoning evaluation framework (URREF). The URREF ontology is
+intended to provide guidance for defining the actual concepts and
+criteria that together comprise the comprehensive uncertainty
+evaluation framework being developed by the Evaluation of
+Technologies for Uncertainty Representation Working Group
+(ETURWG) of the International Society of Information Fusion (ISIF).""" ;
+                                                    dcterms:bibliographicCitation """@inproceedings{costa2012towards,
+  title={Towards unbiased evaluation of uncertainty reasoning: The URREF ontology},
+  author={Costa, Paulo C.G. and Laskey, Kathryn B. and Blasch, Erik and Jousselme, Anne-Laure},
+  booktitle={15th International Conference on Information Fusion},
+  pages={2301--2308},
+  year={2012},
+  organization={IEEE}
+}""" ;
+                                                    dcterms:bibliographicCitation "" ;
+                                                    dcterms:creator "Evaluation of Technologies for Uncertainty Representation Working Group" ;
+                                                    dcterms:publisher "International Society of Information Fusion" ;
+                                                    dcterms:language "en" ;
+                                                    dcterms:license "FIXME".
+
 
 #################################################################
 #    Object Properties
