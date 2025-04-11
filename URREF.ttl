@@ -58,21 +58,24 @@ Technologies for Uncertainty Representation Working Group
 #################################################################
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#DerivationOfUncertainty
-:DerivationOfUncertainty a owl:ObjectProperty ;
+:DerivationOfUncertainty a owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                         rdfs:label "Derivation Of Uncertainty" ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
-                         a owl:FunctionalProperty ;
                          rdfs:domain :Evidence ;
                          rdfs:range :UncertaintyDerivation .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#GivesDataInputTo
 :GivesDataInputTo a owl:ObjectProperty ;
+                  rdfs:label "Gives Data Input To" ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain :Source .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasEvaluationSubject
 :HasEvaluationSubject a owl:ObjectProperty ;
+                      rdfs:label "Has Evaluation Subject" ;
                       rdfs:subPropertyOf owl:topObjectProperty ;
                       owl:inverseOf :IsSubjectOfEvaluationIn ;
                       rdfs:domain :EvaluationProcess ;
@@ -84,6 +87,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasImperfection
 :HasImperfection a owl:ObjectProperty ;
+                 rdfs:label "Has Imperfection" ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :Evidence ;
                  rdfs:range :UncertaintyType .
@@ -91,6 +95,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasSource
 :HasSource a owl:ObjectProperty ;
+           rdfs:label "Has Source" ;
            rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:domain :DataInput ,
                        :Evidence ;
@@ -99,7 +104,8 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasUncertaintySupport
 :HasUncertaintySupport a owl:ObjectProperty ,
-                                owl:FunctionalProperty ;
+                         owl:FunctionalProperty ;
+                       rdfs:label "Has Uncertainty Support" ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
                        rdfs:domain :Evidence ;
                        rdfs:range :UncertaintySupport .
@@ -107,6 +113,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#IsSubjectOfEvaluationIn
 :IsSubjectOfEvaluationIn a owl:ObjectProperty ;
+                         rdfs:label "Is Subject Of Evaluation In" ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:domain :FusionSystem ,
                                      :Information ,
@@ -117,7 +124,8 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#NatureOfUncertainty
 :NatureOfUncertainty a owl:ObjectProperty ,
-                              owl:FunctionalProperty ;
+                       owl:FunctionalProperty ;
+                     rdfs:label "Nature Of Uncertainty" ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain :Evidence ;
                      rdfs:range :UncertaintyNature .
@@ -125,6 +133,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#OuputAssessedBy
 :OuputAssessedBy a owl:ObjectProperty ;
+                 rdfs:label "Ouput Assessed By" ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  owl:inverseOf :QualityAssesses ;
                  rdfs:domain :DataOutput ;
@@ -133,6 +142,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#QualityAssesses
 :QualityAssesses a owl:ObjectProperty ;
+                 rdfs:label "Quality Assesses" ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :Quality ;
                  rdfs:range :DataOutput .
@@ -140,6 +150,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#ReadSource
 :ReadSource a owl:ObjectProperty ;
+            rdfs:label "Read Source" ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :DataProcessingTechnique ;
             rdfs:range :Source .
@@ -147,6 +158,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesTo
 :appliesTo a owl:ObjectProperty ;
+           rdfs:label "Applies To" ;
            rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:domain :UncertaintyRepresentation ;
            rdfs:range :RepresentationCriterion ;
@@ -156,6 +168,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesToHandling
 :appliesToHandling a owl:ObjectProperty ;
+                   rdfs:label "Applies To Handling" ;
                    rdfs:subPropertyOf :appliesTo ;
                    rdfs:domain :InformationHandlingMethod ;
                    rdfs:range :InformationHandlingCriterion ;
@@ -165,6 +178,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesToReasoning
 :appliesToReasoning a owl:ObjectProperty ;
+                    rdfs:label "Applies To Reasoning" ;
                     rdfs:subPropertyOf :appliesTo ;
                     rdfs:domain :UncertaintyReasoning ;
                     rdfs:range :ReasoningCriterion ;
@@ -174,6 +188,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesToRepresentation
 :appliesToRepresentation a owl:ObjectProperty ;
+                         rdfs:label "Applies To Representation" ;
                          rdfs:subPropertyOf :appliesTo ;
                          rdfs:domain :UncertaintyRepresentation ;
                          rdfs:range :RepresentationCriterion ;
@@ -183,6 +198,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#assesses
 :assesses a owl:ObjectProperty ;
+          rdfs:label "Assesses" ;
           rdfs:subPropertyOf owl:topObjectProperty ;
           owl:inverseOf :isAssessedBy ;
           rdfs:domain :Credibility ;
@@ -191,6 +207,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#basedOn
 :basedOn a owl:ObjectProperty ;
+         rdfs:label "Based On" ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :InformationHandlingMethod,
                      :UncertaintyReasoning,
@@ -202,6 +219,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#employs
 :employs a owl:ObjectProperty ;
+         rdfs:label "Employs" ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :EvaluationMeasure ;
          rdfs:range :EvaluationProcess ;
@@ -211,6 +229,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasInformation
 :hasInformation a owl:ObjectProperty ;
+                rdfs:label "Has Information" ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain :DataInput ,
                             :Source .
@@ -218,6 +237,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#impacts
 :impacts a owl:ObjectProperty ;
+         rdfs:label "Impacts" ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :InformationCriterion,
                      :SourceCriterion ;
@@ -228,6 +248,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#isAssessedBy
 :isAssessedBy a owl:ObjectProperty ;
+              rdfs:label "Is Assessed By" ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :DataInput ;
               rdfs:range :Credibility .
@@ -235,6 +256,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#measures
 :measures a owl:ObjectProperty ;
+          rdfs:label "Measures" ;
           rdfs:subPropertyOf owl:topObjectProperty ;
           rdfs:domain :EvaluationMeasure ;
           rdfs:range :EvaluationCriterion ;
@@ -248,6 +270,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasPieceOfInformation
 :HasPieceOfInformation a owl:DatatypeProperty ;
+                       rdfs:label "Has Piece Of Information" ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:domain :Evidence ;
                        rdfs:range xsd:string .
@@ -255,6 +278,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasUncertanitySupport
 :HasUncertanitySupport a owl:DatatypeProperty ;
+                       rdfs:label "Has Uncertanity Support" ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:domain :Evidence ;
                        rdfs:range xsd:string .
@@ -262,6 +286,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#TypeOfInformation
 :TypeOfInformation a owl:DatatypeProperty ;
+                   rdfs:label "Type Of Information" ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain :Evidence ;
                    rdfs:range xsd:string .
@@ -269,12 +294,14 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasCode
 :hasCode a owl:DatatypeProperty ,
-                  owl:FunctionalProperty ;
+           owl:FunctionalProperty ;
+         rdfs:label "Has Code" ;
          rdfs:subPropertyOf owl:topDataProperty .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#usesource
 :usesource a owl:DatatypeProperty ;
+           rdfs:label "Use Source" ;
            rdfs:subPropertyOf owl:topDataProperty .
 
 
@@ -284,34 +311,40 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Accuracy
 :Accuracy a owl:Class ;
+          rdfs:label "Accuracy" ;
           rdfs:subClassOf :Quality ;
           rdfs:isDefinedBy "Closeness of agreement between an evaluation subject value and the true value of the quantity or quality being evaluated." .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Adaptability
 :Adaptability a owl:Class ;
+              rdfs:label "Adaptability" ;
               rdfs:subClassOf :RepresentationCriterion ;
               rdfs:isDefinedBy "Ability of the representational model to allow for different configurations of the model. " .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Aleatory
 :Aleatory a owl:Class ;
+          rdfs:label "Aleatory" ;
           rdfs:subClassOf :UncertaintyNature .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#AmbiguousEvidence
 :AmbiguousEvidence a owl:Class ;
+                   rdfs:label "Ambiguous Evidence" ;
                    rdfs:subClassOf :UncertainEvidence .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Assessment
 :Assessment a owl:Class ;
+            rdfs:label "Assessment" ;
             rdfs:subClassOf :Expressiveness ;
             rdfs:isDefinedBy "Measure of the ability of the system to handle the types of uncertainty assessments (e.g., verbal, quantitative, combined) needed for a given problem, and to distinguish them from one another. " .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Availability
 :Availability a owl:Class ;
+              rdfs:label "Availability" ;
               rdfs:subClassOf :InformationHandlingCriterion ;
               rdfs:isDefinedBy "TODO" ;
               owl:versionInfo "4.0.0" .
@@ -319,12 +352,14 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#BeliefFunctions
 :BeliefFunctions a owl:Class ;
+                 rdfs:label "Belief Functions" ;
                  rdfs:subClassOf :UncertaintyTheory ;
                  rdfs:comment "Belief functions are closely related to probabilities. Beliefs in a hypothesis is calculated as the sum of the masses of all sets it encloses. A belief function differs from a Bayesian probability model in that one does not condition on those parts of the evidence for which no probabilities are specified. This ability to explicitly model the degree of ignorance makes the theory very appealing and has been applied in areas such as inconsistency handling in OWL ontologies (Nikolov et al., 2007) and ontology mapping (e.g. Yaghlane and Laamari, 2007)."@en .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#CommonSenseKnowledge
 :CommonSenseKnowledge a owl:Class ;
+                      rdfs:label "Common Sense Knowledge" ;
                       rdfs:subClassOf :GenericKnowledge ;
                       rdfs:isDefinedBy "TODO"@en ;
                       owl:versionInfo "4.0.0" .
@@ -332,6 +367,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Compatibility
 :Compatibility a owl:Class ;
+               rdfs:label "Compatibility" ;
                rdfs:subClassOf :RepresentationCriterion ;
                owl:disjointWith :Expressiveness ;
                rdfs:isDefinedBy "Measure of how compatible a given knowledge representation is to data standards, and should be related to the degree of flexibility it has in being coded with various standards." .
@@ -339,6 +375,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Competency
 :Competency a owl:Class ;
+            rdfs:label "Competency" ;
             rdfs:subClassOf :SourceCriterion ;
             rdfs:isDefinedBy "TODO"@en ;
             owl:versionInfo "4.0.0" .
@@ -346,6 +383,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#ComputationalCost
 :ComputationalCost a owl:Class ;
+                   rdfs:label "Computational Cost" ;
                    rdfs:subClassOf :PerformanceCriterion ;
                    rdfs:comment "Moved from \"ReasoningCriterion\" in version 4.0.0." ;
                    rdfs:isDefinedBy "Measure of how much of the system’s computational resources are required by a given representational technique to produce its results." ;
@@ -354,6 +392,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Confidentiality
 :Confidentiality a owl:Class ;
+                 rdfs:label "Confidentiality" ;
                  rdfs:subClassOf :InformationHandlingCriterion ;
                  rdfs:isDefinedBy "TODO" ;
                  owl:versionInfo "4.0.0" .
@@ -361,6 +400,7 @@ Technologies for Uncertainty Representation Working Group
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Configurality
 :Configurality a owl:Class ;
+               rdfs:label "Configurality" ;
                rdfs:subClassOf :Expressiveness ;
                rdfs:isDefinedBy """[NOT REVIEWED as of GM55]
 Ability of an uncertainty representation to support combining uncertainty about many propositions and/or variables, of different types, with different types of uncertainty.""" .
@@ -368,58 +408,68 @@ Ability of an uncertainty representation to support combining uncertainty about 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Consistency
 :Consistency a owl:Class ;
+             rdfs:label "Consistency" ;
              rdfs:subClassOf :ReasoningCriterion ;
              rdfs:isDefinedBy "Measure of the ability of the reasoning process to produce the same results when provided with the same data under the same conditions." .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Credibility
 :Credibility a owl:Class ;
+             rdfs:label "Credibility" ;
              rdfs:subClassOf :InformationCriterion ;
              rdfs:isDefinedBy "Measure of the degree to which an evaluation subject can be believed or accepted as true, real, or honest." .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#DataInput
 :DataInput a owl:Class ;
+           rdfs:label "Data Input" ;
            rdfs:subClassOf :FusionSystem ;
            owl:versionInfo "4.0.0" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#DataOutput
 :DataOutput a owl:Class ;
+            rdfs:label "Data Output" ;
             rdfs:subClassOf :FusionSystem ;
             owl:versionInfo "4.0.0" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#DataProcessingTechnique
 :DataProcessingTechnique a owl:Class ;
+                         rdfs:label "Data Processing Technique" ;
                          rdfs:subClassOf :FusionSystem ;
                          owl:versionInfo "4.0.0" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Dependency
 :Dependency a owl:Class ;
+            rdfs:label "Dependency" ;
             rdfs:subClassOf :Expressiveness ;
             rdfs:isDefinedBy "Ability of the uncertainty representation to capture dependency among propositions (e.g., cause and effect, relevance, statistical association)." .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#DissonantEvidence
 :DissonantEvidence a owl:Class ;
+                   rdfs:label "Dissonant Evidence" ;
                    rdfs:subClassOf :UncertainEvidence .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Epistemic
 :Epistemic a owl:Class ;
+           rdfs:label "Epistemic" ;
            rdfs:subClassOf :UncertaintyNature .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#EvaluationCriterion
 :EvaluationCriterion a owl:Class ;
+                     rdfs:label "Evaluation Criterion" ;
                      rdfs:subClassOf owl:Thing ;
                      rdfs:isDefinedBy "Encompasses all the different aspects that must be considered when evaluating uncertainty handling in multi-sensor fusion systems" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#EvaluationMeasure
 :EvaluationMeasure a owl:Class ;
+                   rdfs:label "Evaluation Measure" ;
                    rdfs:subClassOf owl:Thing ;
                    rdfs:comment "Examples covers: STANAG2511Credibility, STANAG2511Reliability, Shanon entropy..." ,
                                 "TODO: what about quantitative versus qualitiative?" ;
@@ -429,6 +479,7 @@ Ability of an uncertainty representation to support combining uncertainty about 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#EvaluationProcess
 :EvaluationProcess a owl:Class ;
+                   rdfs:label "Evaluation Process" ;
                    rdfs:subClassOf owl:Thing ;
                    rdfs:comment """Entities of the Evaluation class are actual evaluations. 
 According to Patton, Evaluation is a process that critically examines a program. It involves collecting and analyzing information about a program's activities, characteristics, and outcomes. Its purpose is to make judgments about a program, to improve its effectiveness, and/or to inform programming decisions. 
@@ -437,12 +488,14 @@ Patton, M.Q. (1987). Qualitative Research Evaluation Methods. Thousand Oaks, CA:
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#EvaluationSubject
 :EvaluationSubject a owl:Class ;
+                   rdfs:label "Evaluation Subject" ;
                    rdfs:subClassOf owl:Thing ;
                    rdfs:comment "An Evaluation Subject is an item which can be assessed according to the criteria defined in the URREF ontology."@en .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Evidence
 :Evidence a owl:Class ;
+          rdfs:label "Evidence" ;
           rdfs:subClassOf owl:Thing ;
           rdfs:comment "An expression in some logical language that evaluates to a truth-value (formula, axiom, assertion). It is then assumed that information will be presented in the form of sentences. So the uncertainty will be associated with sentences."@en ,
                        """Evidence, for the purpose of this ontology is considered to be equivalent to:
@@ -455,6 +508,7 @@ Patton, M.Q. (1987). Qualitative Research Evaluation Methods. Thousand Oaks, CA:
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Explainability
 :Explainability a owl:Class ;
+                rdfs:label "Explainability" ;
                 rdfs:subClassOf :InformationCriterion ;
                 rdfs:isDefinedBy "TODO" ;
                 owl:versionInfo "4.0.0" .
@@ -462,12 +516,14 @@ Patton, M.Q. (1987). Qualitative Research Evaluation Methods. Thousand Oaks, CA:
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Expressiveness
 :Expressiveness a owl:Class ;
+                rdfs:label "Expressiveness" ;
                 rdfs:subClassOf :RepresentationCriterion ;
                 rdfs:isDefinedBy "Measure of the power of a knowledge representation formalism to convey all relevant aspects of a given fusion problem." .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#FusionMethod
 :FusionMethod a owl:Class ;
+             rdfs:label "Fusion Method" ;
              rdfs:subClassOf owl:Thing ;
               rdfs:isDefinedBy "TODO" ;
               owl:versionInfo "4.0.0" .
@@ -475,11 +531,13 @@ Patton, M.Q. (1987). Qualitative Research Evaluation Methods. Thousand Oaks, CA:
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#FusionSystem
 :FusionSystem a owl:Class ;
+              rdfs:label "Fusion System" ;
               rdfs:subClassOf owl:Thing .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#FusionSystemComponent
 :FusionSystemComponent a owl:Class ;
+                       rdfs:label "Fusion System Component" ;
                        rdfs:subClassOf owl:Thing ;
                        owl:deprecated "true"^^xsd:boolean ;
                        owl:versionInfo "4.0.0" .
@@ -487,6 +545,7 @@ Patton, M.Q. (1987). Qualitative Research Evaluation Methods. Thousand Oaks, CA:
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#FusionSystemProcess
 :FusionSystemProcess a owl:Class ;
+                     rdfs:label "Fusion System Process" ;
                      rdfs:subClassOf owl:Thing ;
                      owl:deprecated "true"^^xsd:boolean ;
                      owl:versionInfo "4.0.0" .
@@ -494,12 +553,14 @@ Patton, M.Q. (1987). Qualitative Research Evaluation Methods. Thousand Oaks, CA:
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#FuzzySets
 :FuzzySets a owl:Class ;
+           rdfs:label "Fuzzy Sets" ;
            rdfs:subClassOf :UncertaintyTheory ;
            rdfs:comment "In contrast to probabilistic formalisms, which allow for representing and processing degrees of uncertainty about ambiguous pieces of information, fuzzy formalisms allow for representing and processing degrees of truth about vague (or imprecise) pieces of information. It is important to point out that vague statements are truth-functional, that is, the degree of truth of a vague complex statement (which is constructed from elementary vague statements via logical operators) can be calculated from the degrees of truth of its constituents, while uncertain complex statements are generally not a function of the degrees of uncertainty of their constituents (Dubois and Prade, 1994)."@en .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#GenericKnowledge
 :GenericKnowledge a owl:Class ;
+                  rdfs:label "Generic Knowledge" ;
                   rdfs:subClassOf :Information ;
                   rdfs:isDefinedBy "TODO"@en ;
                   rdfs:seeAlso "TODO: ref (ChatGPT paper)" ;
@@ -508,6 +569,7 @@ Patton, M.Q. (1987). Qualitative Research Evaluation Methods. Thousand Oaks, CA:
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HigherOrderUncertainty
 :HigherOrderUncertainty a owl:Class ;
+                        rdfs:label "Higher Order Uncertainty" ;
                         rdfs:subClassOf :Expressiveness ;
                         rdfs:isDefinedBy """[NOT REVIEWED as of GM55]
 Ability of the system to represent uncertainty about the uncertainty model, including parameters, structure, and/or type of  model. """ .
@@ -515,20 +577,24 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#IncompleteEvidence
 :IncompleteEvidence a owl:Class ;
+                    rdfs:label "Incomplete Evidence" ;
                     rdfs:subClassOf :UncertainEvidence .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#InconclusiveEvidence
 :InconclusiveEvidence a owl:Class ;
+                      rdfs:label "Inconclusive Evidence" ;
                       rdfs:subClassOf :UncertainEvidence .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Information
 :Information a owl:Class ;
+             rdfs:label "Information" ;
              rdfs:subClassOf owl:Thing .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#InformationCriterion
 :InformationCriterion a owl:Class ;
+                      rdfs:label "Information Criterion" ;
                       rdfs:subClassOf :EvaluationCriterion ;
                       rdfs:comment "Renammed from \"DataCriteron\" as of version 4.0.0."@en ;
                       rdfs:isDefinedBy "Evaluation Criteria that concern aspects of information and their relationship to source, the object being reported upon, and the objectives of the fusion process."@en ;
@@ -538,6 +604,7 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#InformationHandlingCriterion
 :InformationHandlingCriterion a owl:Class ;
+                              rdfs:label "Information Handling Criterion" ;
                               rdfs:subClassOf :EvaluationCriterion ;
                               rdfs:comment "Renamed from \"DataHandlingCriterion\" in version 4.0.0." ;
                               rdfs:isDefinedBy "Measure of the way data is managed by the fusion system." ;
@@ -546,12 +613,14 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#InformationHandlingMethod
 :InformationHandlingMethod a owl:Class ;
+                           rdfs:label "Information Handling Method" ;
                            rdfs:isDefinedBy "TODO" ;
                            owl:versionInfo "4.0.0" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Integrity
 :Integrity a owl:Class ;
+           rdfs:label "Integrity" ;
            rdfs:subClassOf :InformationHandlingCriterion ;
            rdfs:isDefinedBy "TODO" ;
            owl:versionInfo "4.0.0" .
@@ -559,6 +628,7 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Interpretability
 :Interpretability a owl:Class ;
+                  rdfs:label "Interpretability" ;
                   rdfs:subClassOf :ReasoningCriterion ;
                   rdfs:isDefinedBy "TODO" ;
                   owl:versionInfo "4.0.0" .
@@ -566,6 +636,7 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Interpretation
 :Interpretation a owl:Class ;
+                rdfs:label "Interpretation" ;
                 rdfs:subClassOf owl:Thing ;
                 owl:deprecated "true"^^xsd:boolean ;
                 owl:versionInfo "4.0.0" .
@@ -573,17 +644,20 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Interval
 :Interval a owl:Class ;
+          rdfs:label "Interval" ;
           rdfs:subClassOf :TypeOfScale .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#KnowledgeHandling
 :KnowledgeHandling a owl:Class ;
+                   rdfs:label "Knowledge Handling" ;
                    rdfs:subClassOf :RepresentationCriterion ;
                    rdfs:isDefinedBy "Measure the ability of a given uncertainty representation technique to convey knowledge."@en .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#LogicalRule
 :LogicalRule a owl:Class ;
+             rdfs:label "Logical Rule" ;
              rdfs:subClassOf :GenericKnowledge ;
              rdfs:isDefinedBy "TODO"@en ;
              owl:versionInfo "4.0.0" .
@@ -591,16 +665,19 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Nominal
 :Nominal a owl:Class ;
+         rdfs:label "Nominal" ;
          rdfs:subClassOf :TypeOfScale .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Objective
 :Objective a owl:Class ;
+           rdfs:label "Objective" ;
            rdfs:subClassOf :UncertaintyDerivation .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Objectivity
 :Objectivity a owl:Class ;
+             rdfs:label "Objectivity" ;
              rdfs:subClassOf :SourceCriterion ;
              rdfs:isDefinedBy "Measure of the extent to which an evaluation subject reports about a matter of fact in an unbiased manner." ;
              owl:incompatibleWith 4 ;
@@ -609,6 +686,7 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Observation
 :Observation a owl:Class ;
+             rdfs:label "Observation" ;
              rdfs:subClassOf :SingularEvidence ;
              rdfs:isDefinedBy "TODO"@en ;
              owl:versionInfo "4.0.0" .
@@ -616,6 +694,7 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#ObservationalSensitivity
 :ObservationalSensitivity a owl:Class ;
+                          rdfs:label "Observational Sensitivity" ;
                           rdfs:subClassOf :Credibility ,
                                           :SourceCriterion ;
                           rdfs:isDefinedBy "Quotient of the change in a result of evaluation subject  and the corresponding change in a value of a quality being observed." ;
@@ -626,11 +705,13 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Ordinal
 :Ordinal a owl:Class ;
+         rdfs:label "Ordinal" ;
          rdfs:subClassOf :TypeOfScale .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Outcomes
 :Outcomes a owl:Class ;
+          rdfs:label "Outcomes" ;
           rdfs:subClassOf :Expressiveness ;
           rdfs:isDefinedBy """[NOT REVIEWED as of GM55]
 Ability to represent different kinds of outcomes for uncertain variables, e.g., Boolean, qualitative categorical, ordinal, discrete numerical, continuous.""" .
@@ -638,6 +719,7 @@ Ability to represent different kinds of outcomes for uncertain variables, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#PerformanceCriterion
 :PerformanceCriterion a owl:Class ;
+                      rdfs:label "Performance Criterion" ;
                       rdfs:subClassOf :EvaluationCriterion ;
                       rdfs:comment "Moved from \"ReasoningCriterion\" and renamed from \"Performance\" in version 4.0.0." ;
                       rdfs:isDefinedBy "Measure how suitable the representational model is to handle the functional requirements of an information fusion system. Other system architecture factors also affect these metrics." ;
@@ -646,6 +728,7 @@ Ability to represent different kinds of outcomes for uncertain variables, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#PhysicalRule
 :PhysicalRule a owl:Class ;
+              rdfs:label "Physical Rule" ;
               rdfs:subClassOf :GenericKnowledge ;
               rdfs:isDefinedBy "TODO"@en ;
               owl:versionInfo "4.0.0" .
@@ -653,6 +736,7 @@ Ability to represent different kinds of outcomes for uncertain variables, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Precision
 :Precision a owl:Class ;
+           rdfs:label "Precision" ;
            rdfs:subClassOf :Quality ;
            rdfs:isDefinedBy """TODO, decide between :
 - The extent to which a piece of information covers different values.
@@ -662,18 +746,21 @@ Ability to represent different kinds of outcomes for uncertain variables, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Probability
 :Probability a owl:Class ;
+             rdfs:label "Probability" ;
              rdfs:subClassOf :UncertaintyTheory ;
              rdfs:comment "Probability theory provides a mathematically sound representation language and formal calculus for rational degrees of belief, which gives different agents the freedom to have different beliefs about a given hypothesis."@en .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Quality
 :Quality a owl:Class ;
+         rdfs:label "Quality" ;
          rdfs:subClassOf :InformationCriterion ;
          rdfs:isDefinedBy "Ability to assess the degree of informational quality of the data" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#RandomSets
 :RandomSets a owl:Class ;
+            rdfs:label "Random Sets" ;
             rdfs:subClassOf :UncertaintyTheory ;
             rdfs:comment "A rough set, first described by a Polish computer scientist Zdzisław I. Pawlak, is a formal approximation of a crisp set (i.e., conventional set) in terms of a pair of sets which give the lower and the upper approximation of the original set. In the standard version of rough set theory (Pawlak 1991), the lower- and upper-approximation sets are crisp sets, but in other variations, the approximating sets may be fuzzy set"@en ;
             rdfs:isDefinedBy "http://en.wikipedia.org/wiki/Rough_sets"^^xsd:anyURI .
@@ -681,17 +768,20 @@ Ability to represent different kinds of outcomes for uncertain variables, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Ratio
 :Ratio a owl:Class ;
+       rdfs:label "Ratio" ;
        rdfs:subClassOf :TypeOfScale .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#ReasoningCriterion
 :ReasoningCriterion a owl:Class ;
+                    rdfs:label "Reasoning Criterion" ;
                     rdfs:subClassOf :EvaluationCriterion ;
                     rdfs:isDefinedBy "Encompasses criteria directly affecting how an information fusion system transforms its input data into knowledge. It can also be called as process or inference criteria, as it deals with how the uncertainty model performs operations with information." .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Relational
 :Relational a owl:Class ;
+            rdfs:label "Relational" ;
             rdfs:subClassOf :Expressiveness ;
             rdfs:isDefinedBy """[NOT REVIEWED as of GM55]
 Ability to represent uncertainty about domains with relational structure, e.g.,   attribute value uncertainty; reference uncertainty; type uncertainty; existence uncertainty.""" .
@@ -699,12 +789,14 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#RelevanceToProblem
 :RelevanceToProblem a owl:Class ;
+                    rdfs:label "Relevance To Problem" ;
                     rdfs:subClassOf :InformationCriterion ;
                     rdfs:isDefinedBy "Measure the degree to which an evaluation subject has direct bearing on the objectives of the fusion process. " .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Reliability
 :Reliability a owl:Class ;
+             rdfs:label "Reliability" ;
              rdfs:subClassOf :SourceCriterion ;
              rdfs:isDefinedBy "TODO"@en ;
              owl:versionInfo "4.0.0" .
@@ -712,12 +804,14 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#RepresentationCriterion
 :RepresentationCriterion a owl:Class ;
+                         rdfs:label "Representation Criterion" ;
                          rdfs:subClassOf :EvaluationCriterion ;
                          rdfs:isDefinedBy "Encompasses criteria related to how uncertainty is characterized, captured and stored in a manner that can be processed by the fusion system. " .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Reputation
 :Reputation a owl:Class ;
+            rdfs:label "Reputation" ;
             rdfs:subClassOf :SourceCriterion ;
             rdfs:isDefinedBy "TODO"@en ;
             owl:versionInfo "4.0.0" .
@@ -725,6 +819,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#RoughSets
 :RoughSets a owl:Class ;
+           rdfs:label "Rough Sets" ;
            rdfs:subClassOf :UncertaintyTheory .
 
 
@@ -748,12 +843,14 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Scalability
 :Scalability a owl:Class ;
+             rdfs:label "Scalability" ;
              rdfs:subClassOf :ReasoningCriterion ;
              rdfs:isDefinedBy "Measure of the ability to handle a growing amount of work in a capable manner or its ability to be enlarged to accommodate that growth." .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SelfConfidence
 :SelfConfidence a owl:Class ;
+                rdfs:label "Self Confidence" ;
                 rdfs:subClassOf :Credibility ,
                                 :SourceCriterion ;
                 rdfs:isDefinedBy "Measure of the evaluation subject's assessment of its own credibility." ;
@@ -764,6 +861,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SensorMeasurement
 :SensorMeasurement a owl:Class ;
+                   rdfs:label "Sensor Measurement" ;
                    rdfs:subClassOf :SingularEvidence ;
                    rdfs:isDefinedBy "TODO"@en ;
                    owl:versionInfo "4.0.0" .
@@ -771,12 +869,14 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Simplicity
 :Simplicity a owl:Class ;
+            rdfs:label "Simplicity" ;
             rdfs:subClassOf :RepresentationCriterion ;
             rdfs:isDefinedBy "Assesses the information system's ability to execute common operations without requiring deep knowledge about its inner details. " .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence
 :SingularEvidence a owl:Class ;
+                  rdfs:label "Singular Evidence" ;
                   rdfs:subClassOf :Information ;
                   rdfs:isDefinedBy "TODO"@en ;
                   rdfs:seeAlso "TODO: ref (ChatGPT paper)" ;
@@ -785,6 +885,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Soudness
 :Soudness a owl:Class ;
+          rdfs:label "Soudness" ;
           rdfs:subClassOf :ReasoningCriterion ;
           rdfs:comment "Changed name in version 4.0.0: from \"Correctness\" to \"Soundness\"."@en ;
           rdfs:isDefinedBy "The quality of being based on valid reason or good judgement."@en ;
@@ -794,12 +895,14 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Source
 :Source a owl:Class ;
+        rdfs:label "Source" ;
         rdfs:subClassOf owl:Thing ;
         rdfs:comment "A source is the origin of the information."@en .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SourceCriterion
 :SourceCriterion a owl:Class ;
+                 rdfs:label "Source Criterion" ;
                  rdfs:subClassOf :EvaluationCriterion ;
                  rdfs:isDefinedBy "Any feature of the source which will affect the quality of the information provided by the source."@en ;
                  owl:versionInfo "4.0.0" .
@@ -807,6 +910,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#StatisticalModel
 :StatisticalModel a owl:Class ;
+                  rdfs:label "Statistical Model" ;
                   rdfs:subClassOf :GenericKnowledge ;
                   rdfs:isDefinedBy "TODO"@en ;
                   owl:versionInfo "4.0.0" .
@@ -814,11 +918,13 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Subjective
 :Subjective a owl:Class ;
+            rdfs:label "Subjective" ;
             rdfs:subClassOf :UncertaintyDerivation .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Testimony
 :Testimony a owl:Class ;
+           rdfs:label "Testimony" ;
            rdfs:subClassOf :SingularEvidence ;
            rdfs:isDefinedBy "TODO"@en ;
            owl:versionInfo "4.0.0" .
@@ -826,6 +932,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Throughput
 :Throughput a owl:Class ;
+            rdfs:label "Throughput" ;
             rdfs:subClassOf :PerformanceCriterion ;
             rdfs:isDefinedBy "Measure of the average (and (possibly peak) rate of conversion of inputs to outputs." ;
             owl:versionInfo "4.0.0" .
@@ -833,6 +940,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Timeliness
 :Timeliness a owl:Class ;
+            rdfs:label "Timeliness" ;
             rdfs:subClassOf :PerformanceCriterion ;
             rdfs:isDefinedBy "Measure of the ability to produce results within a required timeframe." ;
             owl:versionInfo "4.0.0" .
@@ -840,12 +948,14 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Traceability
 :Traceability a owl:Class ;
+              rdfs:label "Traceability" ;
               rdfs:subClassOf :InformationHandlingCriterion ;
               rdfs:isDefinedBy "Measure of the ability of a fusion system to provide an accurate and unbroken historical record of its inputs and the chain of operations that led to its conclusions." .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Transparency
 :Transparency a owl:Class ;
+              rdfs:label "Transparency" ;
               rdfs:subClassOf :SourceCriterion ;
               rdfs:isDefinedBy "TODO" ;
               owl:versionInfo "4.0.0" .
@@ -853,6 +963,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Trust
 :Trust a owl:Class ;
+       rdfs:label "Trust" ;
        rdfs:subClassOf owl:Thing ;
        rdfs:isDefinedBy "TODO: placeholder to import trust ontologies" ;
        owl:versionInfo "4.0.0" .
@@ -860,11 +971,13 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#TypeOfScale
 :TypeOfScale a owl:Class ;
+             rdfs:label "Type Of Scale" ;
              rdfs:subClassOf owl:Thing .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertainEvidence
 :UncertainEvidence a owl:Class ;
+                   rdfs:label "Uncertain Evidence" ;
                    rdfs:subClassOf :InformationCriterion ;
                    rdfs:comment "Moved as a subclass of InformationCriterion in version 4.0.0." ;
                    rdfs:isDefinedBy "TODO" ;
@@ -873,6 +986,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyDerivation
 :UncertaintyDerivation a owl:Class ;
+                       rdfs:label "Uncertainty Derivation" ;
                        rdfs:subClassOf owl:Thing ;
                        rdfs:comment "Uncertainty derivation refers to the way it can be assessed. That is, how the uncertainty metrics can be derived."@en ;
                        rdfs:isDefinedBy "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology"^^xsd:anyURI .
@@ -880,6 +994,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyModel
 :UncertaintyModel a owl:Class ;
+                  rdfs:label "Uncertainty Model" ;
                   rdfs:subClassOf owl:Thing ;
                   rdfs:comment "Renamed from \"UncertaintyFunction\" in version 4.0.0." ;
                   rdfs:isDefinedBy """TODO:
@@ -890,6 +1005,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyNature
 :UncertaintyNature a owl:Class ;
+                   rdfs:label "Uncertainty Nature" ;
                    rdfs:subClassOf owl:Thing ;
                    rdfs:comment "This captures the information about the nature of the uncertainty, i.e., whether the uncertainty is inherent in the phenomenon expressed by the sentence, or it is the result of lack of knowledge of the agent."@en ;
                    rdfs:isDefinedBy "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology"^^xsd:anyURI .
@@ -897,6 +1013,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyReasoning
 :UncertaintyReasoning a owl:Class ;
+                      rdfs:label "Uncertainty Reasoning" ;
                       rdfs:subClassOf owl:Thing ;
                       rdfs:isDefinedBy "TODO" ;
                       owl:versionInfo "4.0.0" .
@@ -904,23 +1021,27 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyRepresentation
 :UncertaintyRepresentation a owl:Class ;
+                           rdfs:label "Uncertainty Representation" ;
                            rdfs:subClassOf owl:Thing .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintySupport
 :UncertaintySupport a owl:Class ;
+                    rdfs:label "Uncertainty Support" ;
                     rdfs:subClassOf owl:Thing ;
                     rdfs:isDefinedBy "TODO: what you are certain about." .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyTheory
 :UncertaintyTheory a owl:Class ;
+                   rdfs:label "Uncertainty Theory" ;
                    rdfs:subClassOf owl:Thing ;
                    rdfs:isDefinedBy "http://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/#uncertaintyontology"^^xsd:anyURI .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UncertaintyType
 :UncertaintyType a owl:Class ;
+                 rdfs:label "Uncertainty Type" ;
                  rdfs:subClassOf owl:Thing ;
                  rdfs:comment "Uncertainty Type is a concept that focuses on underlying characteristics of the information that make it uncertain. "@en ,
                               """For the purposes of this ontology, Uncertainty type is equivalent to:
@@ -930,12 +1051,14 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#UnreliableEvidence
 :UnreliableEvidence a owl:Class ;
+                    rdfs:label "Unreliable Evidence" ;
                     rdfs:subClassOf owl:Thing ;
                     rdfs:subClassOf :UncertainEvidence .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Veracity
 :Veracity a owl:Class ;
+          rdfs:label "Veracity" ;
           rdfs:subClassOf :SourceCriterion ;
           rdfs:isDefinedBy "Measure of the extent to which a source reports what it assesses to be the case." ;
           owl:incompatibleWith 4 ;
@@ -944,6 +1067,7 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#WeightOfInformation
 :WeightOfInformation a owl:Class ;
+                     rdfs:label "Weight Of Information" ;
                      rdfs:subClassOf :InformationCriterion ;
                      rdfs:comment "Renamed from \"WeightOfEvidence\" in version 4.0.0."@en ;
                      rdfs:isDefinedBy "Measure of the degree of impact of an evaluation subject on the result of fusion. " ;
