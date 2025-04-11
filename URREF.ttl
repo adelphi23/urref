@@ -614,6 +614,7 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#InformationHandlingMethod
 :InformationHandlingMethod a owl:Class ;
                            rdfs:label "Information Handling Method" ;
+                           rdfs:subClassOf owl:Thing ;
                            rdfs:isDefinedBy "TODO" ;
                            owl:versionInfo "4.0.0" .
 
