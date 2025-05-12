@@ -381,6 +381,26 @@ Technologies for Uncertainty Representation Working Group
             owl:versionInfo "4.0.0" .
 
 
+##  http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Completeness
+:Completeness a owl:Class ;
+             rdfs:label "Completeness" ;
+             rdfs:subClassOf :PerformanceCriterion ;
+             rdfs:comment "Taken from https://www.researchgate.net/publication/334836334_How_to_Evaluate_High_Level_Fusion_Algorithms"@en ;
+             rdfs:isDefinedBy """Computes the amount of information that is present in both the result r of the algorithm and the expected ideal result (i.e. ground truth), with regards to the amount of information contained in the ideal result (ground truth),"""@en;
+             owl:versionInfo "4.0.0" .
+
+
+
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF.owl#Correctness
+:Correctness a owl:Class ;
+             rdfs:label "Correctness" ;
+             rdfs:subClassOf :PerformanceCriterion ;
+             rdfs:comment "Taken from https://www.researchgate.net/publication/334836334_How_to_Evaluate_High_Level_Fusion_Algorithms"@en ;
+             rdfs:isDefinedBy """Computes the amount of information that is present in both the result r of the algorithm and the expected ideal result (i.e. ground truth), with regards to the amount of information contained in the actual result r,"""@en ;
+             owl:versionInfo "4.0.0" .
+
+
+
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#ComputationalCost
 :ComputationalCost a owl:Class ;
                    rdfs:label "Computational Cost" ;
