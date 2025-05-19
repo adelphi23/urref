@@ -387,7 +387,7 @@ Technologies for Uncertainty Representation Working Group
              rdfs:subClassOf :PerformanceCriterion ;
              rdfs:comment "Taken from https://www.researchgate.net/publication/334836334_How_to_Evaluate_High_Level_Fusion_Algorithms"@en ;
              rdfs:isDefinedBy """Computes the amount of information that is present in both the result r of the algorithm and the expected ideal result (i.e. ground truth), with regards to the amount of information contained in the ideal result (ground truth),"""@en;
-             owl:versionInfo "4.0.0" .
+             owl:versionInfo "4.1.0" .
 
 
 
@@ -397,7 +397,7 @@ Technologies for Uncertainty Representation Working Group
              rdfs:subClassOf :PerformanceCriterion ;
              rdfs:comment "Taken from https://www.researchgate.net/publication/334836334_How_to_Evaluate_High_Level_Fusion_Algorithms"@en ;
              rdfs:isDefinedBy """Computes the amount of information that is present in both the result r of the algorithm and the expected ideal result (i.e. ground truth), with regards to the amount of information contained in the actual result r,"""@en ;
-             owl:versionInfo "4.0.0" .
+             owl:versionInfo "4.1.0" .
 
 
 
