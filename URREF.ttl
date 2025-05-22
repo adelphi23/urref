@@ -5,12 +5,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @base <http://eturwg.c4i.gmu.edu/files/ontologies/URREF#> .
 
 <http://eturwg.c4i.gmu.edu/files/ontologies/URREF> a owl:Ontology ;
-                                                    dcterms:modified "2024-04-11" ;
+                                                    dcterms:modified "2025-05-22" ;
                                                     owl:priorVersion "v4.0.0" ;
-                                                    owl:versionInfo "v4.0.1" ;
+                                                    owl:versionInfo "v4.1.0" ;
                                                     owl:versionIRI <http://eturwg.c4i.gmu.edu/files/ontologies/URREF/4.0.1/URREF> ;
                                                     rdfs:comment """v2a: ETURWG GM40
 v2b: ETURWG GM41
@@ -57,25 +58,40 @@ Technologies for Uncertainty Representation Working Group
 #    Object Properties
 #################################################################
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#DerivationOfUncertainty
-:DerivationOfUncertainty a owl:ObjectProperty ,
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#derivationOfUncertainty
+:derivationOfUncertainty a owl:ObjectProperty ,
                            owl:FunctionalProperty ;
                          rdfs:label "Derivation Of Uncertainty" ;
+                         skos:hiddenLabel "DerivationOfUncertainty" ;
+                         owl:versionInfo "4.1.0" ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:domain :Evidence ;
                          rdfs:range :UncertaintyDerivation .
 
+:DerivationOfUncertainty a owl:ObjectProperty ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :derivationOfUncertainty .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#GivesDataInputTo
-:GivesDataInputTo a owl:ObjectProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#givesDataInputTo
+:givesDataInputTo a owl:ObjectProperty ;
                   rdfs:label "Gives Data Input To" ;
+                  skos:hiddenLabel "GivesDataInputTo" ;
+                  owl:versionInfo "4.1.0" ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain :Source .
 
+:GivesDataInputTo a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :givesDataInputTo .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasEvaluationSubject
-:HasEvaluationSubject a owl:ObjectProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasEvaluationSubject
+:hasEvaluationSubject a owl:ObjectProperty ;
                       rdfs:label "Has Evaluation Subject" ;
+                      skos:hiddenLabel "HasEvaluationSubject" ;
+                      owl:versionInfo "4.1.0" ;
                       rdfs:subPropertyOf owl:topObjectProperty ;
                       owl:inverseOf :IsSubjectOfEvaluationIn ;
                       rdfs:domain :EvaluationProcess ;
@@ -84,32 +100,58 @@ Technologies for Uncertainty Representation Working Group
                                  :Source ,
                                  :UncertaintyTheory .
 
+:HasEvaluationSubject a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :hasEvaluationSubject .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasImperfection
-:HasImperfection a owl:ObjectProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasImperfection
+:hasImperfection a owl:ObjectProperty ;
                  rdfs:label "Has Imperfection" ;
+                 skos:hiddenLabel "HasImperfection" ;
+                 owl:versionInfo "4.1.0" ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :Evidence ;
                  rdfs:range :UncertaintyType .
 
+:HasImperfection a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :hasImperfection .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasSource
-:HasSource a owl:ObjectProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasSource
+:hasSource a owl:ObjectProperty ;
            rdfs:label "Has Source" ;
+           skos:hiddenLabel "HasSource" ;
+           owl:versionInfo "4.1.0" ;
            rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:domain :DataInput ,
                        :Evidence ;
            rdfs:range :Source .
 
+:HasSource a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :hasSource .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasUncertaintySupport
-:HasUncertaintySupport a owl:ObjectProperty ,
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasUncertaintySupport
+:hasUncertaintySupport a owl:ObjectProperty ,
                          owl:FunctionalProperty ;
                        rdfs:label "Has Uncertainty Support" ;
+                       skos:hiddenLabel "HasUncertaintySupport" ;
+                       owl:versionInfo "4.1.0" ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
                        rdfs:domain :Evidence ;
                        rdfs:range :UncertaintySupport .
 
+:HasUncertaintySupport a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :hasUncertaintySupport .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#IsSubjectOfEvaluationIn
 :IsSubjectOfEvaluationIn a owl:ObjectProperty ;
@@ -122,92 +164,157 @@ Technologies for Uncertainty Representation Working Group
                          rdfs:range :EvaluationProcess .
 
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#NatureOfUncertainty
-:NatureOfUncertainty a owl:ObjectProperty ,
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#natureOfUncertainty
+:natureOfUncertainty a owl:ObjectProperty ,
                        owl:FunctionalProperty ;
                      rdfs:label "Nature Of Uncertainty" ;
+                     skos:hiddenLabel "NatureOfUncertainty" ;
+                     owl:versionInfo "4.1.0" ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain :Evidence ;
                      rdfs:range :UncertaintyNature .
 
+:NatureOfUncertainty a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :natureOfUncertainty .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#OuputAssessedBy
-:OuputAssessedBy a owl:ObjectProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#ouputAssessedBy
+:ouputAssessedBy a owl:ObjectProperty ;
                  rdfs:label "Ouput Assessed By" ;
+                 skos:hiddenLabel "OuputAssessedBy" ;
+                 owl:versionInfo "4.1.0" ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  owl:inverseOf :QualityAssesses ;
                  rdfs:domain :DataOutput ;
                  rdfs:range :Quality .
 
+:OuputAssessedBy a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :ouputAssessedBy .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#QualityAssesses
-:QualityAssesses a owl:ObjectProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#qualityAssesses
+:qualityAssesses a owl:ObjectProperty ;
                  rdfs:label "Quality Assesses" ;
+                 skos:hiddenLabel "QualityAssesses" ;
+                 owl:versionInfo "4.1.0" ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :Quality ;
                  rdfs:range :DataOutput .
 
+:QualityAssesses a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :qualityAssesses .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#ReadSource
-:ReadSource a owl:ObjectProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#readSource
+:readSource a owl:ObjectProperty ;
             rdfs:label "Read Source" ;
+            skos:hiddenLabel "ReadSource" ;
+            owl:versionInfo "4.1.0" ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :DataProcessingTechnique ;
             rdfs:range :Source .
 
+:ReadSource a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :readSource .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesTo
 :appliesTo a owl:ObjectProperty ;
            rdfs:label "Applies To" ;
+           skos:hiddenLabel "appliesTo" ;
+           owl:versionInfo "4.1.0" ;
            rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:domain :UncertaintyRepresentation ;
            rdfs:range :RepresentationCriterion ;
            rdfs:isDefinedBy "TODO" ;
            owl:versionInfo "4.0.0" .
 
+:appliesTo a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :appliesTo .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesToHandling
 :appliesToHandling a owl:ObjectProperty ;
                    rdfs:label "Applies To Handling" ;
+                   skos:hiddenLabel "appliesToHandling" ;
+                   owl:versionInfo "4.1.0" ;
                    rdfs:subPropertyOf :appliesTo ;
                    rdfs:domain :InformationHandlingMethod ;
                    rdfs:range :InformationHandlingCriterion ;
                    rdfs:isDefinedBy "TODO" ;
                    owl:versionInfo "4.0.0" .
 
+:appliesToHandling a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :appliesToHandling .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesToReasoning
 :appliesToReasoning a owl:ObjectProperty ;
                     rdfs:label "Applies To Reasoning" ;
+                    skos:hiddenLabel "appliesToReasoning" ;
+                    owl:versionInfo "4.1.0" ;
                     rdfs:subPropertyOf :appliesTo ;
                     rdfs:domain :UncertaintyReasoning ;
                     rdfs:range :ReasoningCriterion ;
                     rdfs:isDefinedBy "TODO" ;
                     owl:versionInfo "4.0.0" .
 
+:appliesToReasoning a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :appliesToReasoning .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#appliesToRepresentation
 :appliesToRepresentation a owl:ObjectProperty ;
                          rdfs:label "Applies To Representation" ;
+                         skos:hiddenLabel "appliesToRepresentation" ;
+                         owl:versionInfo "4.1.0" ;
                          rdfs:subPropertyOf :appliesTo ;
                          rdfs:domain :UncertaintyRepresentation ;
                          rdfs:range :RepresentationCriterion ;
                          rdfs:isDefinedBy "TODO" ;
                          owl:versionInfo "4.0.0" .
 
+:appliesToRepresentation a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :appliesToRepresentation .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#assesses
 :assesses a owl:ObjectProperty ;
           rdfs:label "Assesses" ;
+          skos:hiddenLabel "assesses" ;
+          owl:versionInfo "4.1.0" ;
           rdfs:subPropertyOf owl:topObjectProperty ;
           owl:inverseOf :isAssessedBy ;
           rdfs:domain :Credibility ;
           rdfs:range :DataInput .
 
+:assesses a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :assesses .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#basedOn
 :basedOn a owl:ObjectProperty ;
          rdfs:label "Based On" ;
+         skos:hiddenLabel "basedOn" ;
+         owl:versionInfo "4.1.0" ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :InformationHandlingMethod,
                      :UncertaintyReasoning,
@@ -216,28 +323,49 @@ Technologies for Uncertainty Representation Working Group
          rdfs:isDefinedBy "TODO" ;
          owl:versionInfo "4.0.0" .
 
+:basedOn a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :basedOn .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#employs
 :employs a owl:ObjectProperty ;
          rdfs:label "Employs" ;
+         skos:hiddenLabel "employs" ;
+         owl:versionInfo "4.1.0" ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :EvaluationMeasure ;
          rdfs:range :EvaluationProcess ;
          rdfs:isDefinedBy "TODO" ;
          owl:versionInfo "4.0.0" .
 
+:employs a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :employs .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasInformation
 :hasInformation a owl:ObjectProperty ;
                 rdfs:label "Has Information" ;
+                skos:hiddenLabel "hasInformation" ;
+                owl:versionInfo "4.1.0" ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain :DataInput ,
                             :Source .
 
+:hasInformation a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :hasInformation .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#impacts
 :impacts a owl:ObjectProperty ;
          rdfs:label "Impacts" ;
+         skos:hiddenLabel "impacts" ;
+         owl:versionInfo "4.1.0" ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :InformationCriterion,
                      :SourceCriterion ;
@@ -245,65 +373,119 @@ Technologies for Uncertainty Representation Working Group
          rdfs:comment "TODO: decide whether associations are pascalCase or CamelCase."@en ;
          owl:versionInfo "4.0.0" .
 
+:impacts a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :impacts .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#isAssessedBy
 :isAssessedBy a owl:ObjectProperty ;
               rdfs:label "Is Assessed By" ;
+              skos:hiddenLabel "isAssessedBy" ;
+              owl:versionInfo "4.1.0" ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :DataInput ;
               rdfs:range :Credibility .
 
+:isAssessedBy a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :isAssessedBy .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#measures
 :measures a owl:ObjectProperty ;
           rdfs:label "Measures" ;
+          skos:hiddenLabel "measures" ;
+          owl:versionInfo "4.1.0" ;
           rdfs:subPropertyOf owl:topObjectProperty ;
           rdfs:domain :EvaluationMeasure ;
           rdfs:range :EvaluationCriterion ;
           rdfs:isDefinedBy "TODO" ;
           owl:versionInfo "4.0.0" .
 
+:measures a owl:ObjectProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :measures .
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasPieceOfInformation
-:HasPieceOfInformation a owl:DatatypeProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasPieceOfInformation
+:hasPieceOfInformation a owl:DatatypeProperty ;
                        rdfs:label "Has Piece Of Information" ;
+                       skos:hiddenLabel "HasPieceOfInformation" ;
+                       owl:versionInfo "4.1.0" ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:domain :Evidence ;
                        rdfs:range xsd:string .
 
+:HasPieceOfInformation a owl:DatatypeProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :hasPieceOfInformation .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#HasUncertanitySupport
-:HasUncertanitySupport a owl:DatatypeProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasUncertanitySupport
+:hasUncertanitySupport a owl:DatatypeProperty ;
                        rdfs:label "Has Uncertanity Support" ;
+                       skos:hiddenLabel "HasUncertanitySupport" ;
+                       owl:versionInfo "4.1.0" ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:domain :Evidence ;
                        rdfs:range xsd:string .
 
+:HasUncertanitySupport a owl:DatatypeProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :hasUncertanitySupport .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#TypeOfInformation
-:TypeOfInformation a owl:DatatypeProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#typeOfInformation
+:typeOfInformation a owl:DatatypeProperty ;
                    rdfs:label "Type Of Information" ;
+                   skos:hiddenLabel "TypeOfInformation" ;
+                   owl:versionInfo "4.1.0" ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain :Evidence ;
                    rdfs:range xsd:string .
 
+:TypeOfInformation a owl:DatatypeProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :typeOfInformation .
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#hasCode
 :hasCode a owl:DatatypeProperty ,
            owl:FunctionalProperty ;
          rdfs:label "Has Code" ;
+         skos:hiddenLabel "hasCode" ;
+         owl:versionInfo "4.1.0" ;
          rdfs:subPropertyOf owl:topDataProperty .
 
+:hasCode a owl:DatatypeProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :hasCode .
 
-###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#usesource
-:usesource a owl:DatatypeProperty ;
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#useSource
+:useSource a owl:DatatypeProperty ;
            rdfs:label "Use Source" ;
+           skos:hiddenLabel "usesource" ;
+           owl:versionInfo "4.1.0" ;
            rdfs:subPropertyOf owl:topDataProperty .
 
+:usesource a owl:DatatypeProperty ;
+    owl:versionInfo "4.1.0" ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:comment "CamelCase object properties are deprecated in URREF version 4.1.0, they will be removed in version 5."@en ;
+    owl:equivalentProperty :useSource .
 
 #################################################################
 #    Classes
