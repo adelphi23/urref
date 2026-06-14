@@ -23,9 +23,9 @@
 @base <http://eturwg.c4i.gmu.edu/files/ontologies/URREF#> .
 
 <http://eturwg.c4i.gmu.edu/files/ontologies/URREF> a owl:Ontology ;
-                                                    dcterms:modified "2025-05-22" ;
-                                                    owl:priorVersion "v4.0.0" ;
-                                                    owl:versionInfo "v4.1.0" ;
+                                                    dcterms:modified "2026-06-14" ;
+                                                    owl:priorVersion "v4.1.0" ;
+                                                    owl:versionInfo "v4.2.0" ;
                                                     owl:versionIRI <http://eturwg.c4i.gmu.edu/files/ontologies/URREF/4.0.1/URREF> ;
                                                     rdfs:comment """v2a: ETURWG GM40
 v2b: ETURWG GM41
@@ -34,7 +34,9 @@ v2d: ETURWG GM55
 v3: ETURWG GM83
 v3a: ETURWG GM90
 v3b: ETURWG GM102 F18 F2F
-v4.0.0: ETURWG""" ;
+v4.0.0: ETURWG
+v4.1.0: ETURWG
+v4.2.0: Added Inconsistency (subclass of UncertaintyType); added Coverage and Distinction (subclasses of Expressiveness); added InformationType; fixed Credibility hierarchy (SelfConfidence and ObservationalSensitivity moved exclusively to SourceCriterion); updated Trust with STRAM reference; added evaluatesUncertainty property.""" ;
                                                     rdfs:label "URREF" ;
                                                     dcterms:title "Uncertainty Representation and Reasoning Evaluation Framework's Ontology" ;
                                                     dcterms:description "A taxonomy for modeling uncertain information." ;
@@ -912,8 +914,8 @@ Ability of the system to represent uncertainty about the uncertainty model, incl
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#ObservationalSensitivity
 :ObservationalSensitivity a owl:Class ;
                           rdfs:label "Observational Sensitivity" ;
-                          rdfs:subClassOf :Credibility ,
-                                          :SourceCriterion ;
+                          rdfs:subClassOf :SourceCriterion ;
+                          rdfs:comment "Moved exclusively to SourceCriterion in v4.2.0; was previously also listed under Credibility, which is now a leaf criterion."@en ;
                           rdfs:isDefinedBy "Quotient of the change in a result of evaluation subject  and the corresponding change in a value of a quality being observed." ;
                           owl:deprecated "true"^^xsd:boolean ;
                           owl:incompatibleWith 4 ;
@@ -1068,8 +1070,8 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SelfConfidence
 :SelfConfidence a owl:Class ;
                 rdfs:label "Self Confidence" ;
-                rdfs:subClassOf :Credibility ,
-                                :SourceCriterion ;
+                rdfs:subClassOf :SourceCriterion ;
+                rdfs:comment "Moved exclusively to SourceCriterion in v4.2.0; was previously also listed under Credibility, which is now a leaf criterion."@en ;
                 rdfs:isDefinedBy "Measure of the evaluation subject's assessment of its own credibility." ;
                 owl:deprecated "true"^^xsd:boolean ;
                 owl:incompatibleWith 4 ;
@@ -1181,9 +1183,15 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Trust
 :Trust a owl:Class ;
        rdfs:label "Trust" ;
-       rdfs:subClassOf owl:Thing ;
-       rdfs:isDefinedBy "TODO: placeholder to import trust ontologies" ;
-       owl:versionInfo "4.0.0" .
+       rdfs:subClassOf :SourceCriterion ;
+       rdfs:comment """Trust as a source criterion for uncertainty evaluation in information fusion.
+Linked to the STRAM (Scalable Trust and Risk Assessment Model) ontology.
+See: Cho et al. (2019). STRAM: Measuring the Trustworthiness of Computer-Based Systems.
+Import candidate: the STRAM ontology can be imported to operationalize trust evaluation within URREF.
+Placement decision (v4.2.0): Trust is positioned under SourceCriterion, reflecting that trustworthiness
+is a property of the source providing information. Review at Fusion 2026 F2F."""@en ;
+       rdfs:seeAlso <https://doi.org/10.1145/3323815> ;
+       owl:versionInfo "4.2.0" .
 
 
 ###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#TypeOfScale
@@ -1291,6 +1299,76 @@ Ability to represent uncertainty about domains with relational structure, e.g., 
                      owl:backwardCompatibleWith 4 ;
                      owl:versionInfo "4.0.0" .
 
+
+
+
+#################################################################
+#    New classes — v4.2.0
+#################################################################
+
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Inconsistency
+:Inconsistency a owl:Class ;
+               rdfs:label "Inconsistency" ;
+               rdfs:subClassOf :UncertaintyType ;
+               rdfs:comment "A type of uncertainty arising when multiple information sources provide contradictory or logically incompatible assertions. Introduced to capture the handling of conflicting evidence, distinct from ambiguity or incompleteness."@en ;
+               rdfs:isDefinedBy "Ramos Flores, Jousselme, Costa — Towards a formal comparison of uncertainty handling, FUSION 2020." ;
+               owl:versionInfo "4.2.0" .
+
+
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Coverage
+:Coverage a owl:Class ;
+          rdfs:label "Coverage" ;
+          rdfs:subClassOf :Expressiveness ;
+          rdfs:comment "The extent to which an uncertainty representation captures the different types of uncertainty concepts. One of two aspects of Expressiveness, alongside Distinction."@en ;
+          rdfs:isDefinedBy "de Villiers, Jousselme et al. — Subjects under evaluation with the URREF ontology, FUSION 2017." ;
+          owl:versionInfo "4.2.0" .
+
+
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#Distinction
+:Distinction a owl:Class ;
+             rdfs:label "Distinction" ;
+             rdfs:subClassOf :Expressiveness ;
+             rdfs:comment "The ability to discriminate between two elements, such as two types of uncertainty or two uncertainty expressions. An uncertainty representation may capture both aleatory and epistemic uncertainty yet represent them identically — high Coverage, low Distinction."@en ;
+             rdfs:isDefinedBy "de Villiers, Jousselme et al. — Subjects under evaluation with the URREF ontology, FUSION 2017." ;
+             owl:versionInfo "4.2.0" .
+
+
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#InformationType
+:InformationType a owl:Class ;
+                 rdfs:label "Information Type" ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:comment "Classification of information into Generic or Singular types, introduced for evaluating Large Language Model outputs. Generic information (knowledge) consists of general propositions not tied to a specific situation (e.g., encyclopaedic facts, rules). Singular information (evidence) consists of specific assertions about a particular situation or observation. GenericKnowledge and SingularEvidence (subclasses of :Information) represent the corresponding subtypes."@en ;
+                 rdfs:isDefinedBy "Jousselme et al. — Uncertain about ChatGPT: enabling the uncertainty evaluation of large language models, FUSION 2023." ;
+                 owl:versionInfo "4.2.0" .
+
+
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#GenericInformationType
+:GenericInformationType a :InformationType ;
+                        rdfs:label "Generic Information Type" ;
+                        rdfs:comment "Corresponds to :GenericKnowledge — information that is general, non-situational, and knowledge-like."@en ;
+                        owl:versionInfo "4.2.0" .
+
+
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularInformationType
+:SingularInformationType a :InformationType ;
+                          rdfs:label "Singular Information Type" ;
+                          rdfs:comment "Corresponds to :SingularEvidence — information that is specific to a situation or observation, and evidence-like."@en ;
+                          owl:versionInfo "4.2.0" .
+
+
+#################################################################
+#    New object properties — v4.2.0
+#################################################################
+
+###  http://eturwg.c4i.gmu.edu/files/ontologies/URREF#evaluatesUncertainty
+:evaluatesUncertainty a owl:ObjectProperty ;
+                      rdfs:label "Evaluates Uncertainty" ;
+                      skos:hiddenLabel "evaluatesUncertainty" ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain :InformationCriterion ;
+                      rdfs:range :UncertaintyType ;
+                      rdfs:isDefinedBy "Expresses that an InformationCriterion is used to evaluate a particular type of uncertainty in the represented information."@en ;
+                      owl:versionInfo "4.2.0" .
 
 #################################################################
 #    General axioms
